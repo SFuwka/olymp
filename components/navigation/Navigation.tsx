@@ -1,0 +1,63 @@
+import clsx from 'clsx'
+import Link from 'next/link'
+import { useEffect, useState } from 'react'
+import { Instagram } from '../../assets/svg/Instagram'
+import { Logo } from '../../assets/svg/Logo'
+import { Telegram } from '../../assets/svg/Telegram'
+import { Vk } from '../../assets/svg/Vk'
+import { useWindowSize } from '../../hooks/windowSize'
+import BurgerButton from '../buttons/burgerButton/BurgerButton'
+import styles from './navigation.module.scss'
+
+const linksJsx = [
+    <Link key='coachesNav' href={'/#coaches'}><a>тренеры</a></Link>,
+    <Link key='scheduleNav' href={'/#schedule'}><a>расписание</a></Link>,
+    <Link key='pricesNav' href={'/#prices'}><a>цены</a></Link>,
+    <Link key='competitionsNav' href={'/#competitions'}><a>соревнования и сборы</a></Link>,
+]
+
+export const Navigation = () => {
+    const [menuOpen, setMenuOpen] = useState(false)
+    const windowWidth = useWindowSize()[0]
+    const handleBurgerClick = () => {
+        setMenuOpen(prev => !prev)
+    }
+
+    useEffect(() => {
+        if (windowWidth > 480 && menuOpen) setMenuOpen(false)
+    }, [windowWidth, menuOpen])
+
+    return (
+        <nav className={styles.nav}>
+            <div className={styles.navContainer}>
+                {windowWidth > 480 && <div className={styles.logo}><Link href={'/'}><a><Logo color='#fff' /></a></Link></div>}
+                {windowWidth <= 480 && <BurgerButton onClick={handleBurgerClick} />}
+                <div className={styles.navLinks}>
+                    {windowWidth > 480 && <div>
+                        {linksJsx.map((link) => {
+                            return link
+                        })}
+                    </div>}
+                    {<div className={clsx(styles.menu, menuOpen ? styles.menuOpen : styles.menuClosed)}>
+                        <ul>
+                            {linksJsx.map(link => {
+                                return <li key={link.key}>{link}</li>
+                            })}
+                        </ul>
+                    </div>}
+                    <div className={styles.socialAndPhones}>
+                        <div className={styles.social}>
+                            <Link href={'#'}><a><Vk width={30} height={30} /></a></Link>
+                            <Link href={'#'}><a><Instagram width={30} height={30} /></a></Link>
+                            <Link href={'#'}><a><Telegram /></a></Link>
+                        </div>
+                        <div className={styles.phones}>
+                            <Link href="tel:+79516667113"><a>+7 (951) 666 71 13</a></Link>
+                            <Link href="tel:+79817318152"><a>+7 (981) 731 81 52</a></Link>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    )
+}
