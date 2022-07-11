@@ -1,0 +1,5 @@
+@import "./variables.scss";
+
+@function space($multiply) {
+    @return $spacing * $multiply;
+};
