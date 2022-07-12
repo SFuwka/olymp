@@ -5,7 +5,7 @@ import { Instagram } from '../../assets/svg/Instagram'
 import { Logo } from '../../assets/svg/Logo'
 import { Telegram } from '../../assets/svg/Telegram'
 import { Vk } from '../../assets/svg/Vk'
-import { useWindowSize } from '../../hooks/windowSize'
+import { useWindowSize } from '../../helpFunctions/hooks/windowSize'
 import BurgerButton from '../buttons/burgerButton/BurgerButton'
 import styles from './navigation.module.scss'
 
@@ -52,8 +52,8 @@ export const Navigation = () => {
                             <Link href={'#'}><a><Telegram /></a></Link>
                         </div>
                         <div className={styles.phones}>
-                            <Link href="tel:+79516667113"><a>+7 (951) 666 71 13</a></Link>
-                            <Link href="tel:+79817318152"><a>+7 (981) 731 81 52</a></Link>
+                            <a href="tel:+79516667113">+7 (951) 666 71 13</a>
+                            <a href="tel:+79817318152">+7 (981) 731 81 52</a>
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,80 @@
+@import "../../styles/functions.scss";
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+.root {
+    form {
+        display: flex;
+    }
+    input {
+        background-color: $inputColor;
+        border: none;
+        padding: 8px;
+        font-size: 14px;
+        margin-right: space(2);
+        width: 120px;
+        &:focus {
+            box-shadow: inset 0px 0px 0px 1px $pink;
+            outline: none;
+        }
+    }
+    .phoneInput{
+        width: 140px;
+    }
+}
+
+.button {
+    border: none;
+    width: 120px;
+    background-color: $aquaBlue;
+    color: #fff;
+    padding: 8px;
+    font-size: 15px;
+    text-transform: uppercase;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    &:hover {
+        box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+    }
+    &:active {
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
+        transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+    @media screen and(max-width: 900px) {
+        width: 100%;
+    }
+}
+
+@mixin labelFocusFixed {
+    transform: translateY(-13px) scale(0.7);
+    transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+    background: linear-gradient(180deg, transparent 0, $inputColor 13px, $inputColor 14px, $inputColor 26px);
+    color: $pinkB;
+}
+
+.inputContainer {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    label {
+        pointer-events: none;
+        padding-left: 8px;
+        padding-right: 8px;
+        height: 26px;
+        background-color: $inputColor;
+        position: absolute;
+        display: block;
+        font-weight: 400;
+        transform: translateX(6px) translateY(4px) scale(1);
+        color: rgba(0, 0, 0, 0.4);
+        transition: transform 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    input:focus + label {
+        @include labelFocusFixed;
+    }
+
+    .labelFixed {
+        @include labelFocusFixed;
+    }
+}

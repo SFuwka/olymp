@@ -1,0 +1,17 @@
+@import "../../styles/mixins.scss";
+.root {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba($color: #000000, $alpha: 0.6);
+    @include flexCenter;
+}
+
+.wrapper {
+    z-index: 10000;
+    position: relative;
+    background-color: aliceblue;
+}

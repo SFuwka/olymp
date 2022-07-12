@@ -3,6 +3,8 @@
 @import "../../styles/mixins.scss";
 
 .navContainer {
+    position: absolute;
+    width: 100%;
     display: flex;
     align-items: center;
     @media screen and(max-width: 900px) {

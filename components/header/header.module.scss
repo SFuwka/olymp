@@ -1,5 +1,4 @@
 .container {
-    position: absolute;
     top: 0;
     height: 650px;
     width: 100%;
@@ -9,7 +8,7 @@
     background-position-y: 40%;
     background-repeat: no-repeat;
 
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1000px) {
         background-image: url("../../public/images/main.jpg");
         height: 550px;
     }

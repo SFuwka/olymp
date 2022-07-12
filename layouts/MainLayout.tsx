@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import React from 'react'
 import { Navigation } from '../components/navigation/Navigation'
-import { useWindowSize } from '../hooks/windowSize'
+import { useWindowSize } from '../helpFunctions/hooks/windowSize'
 
 import styles from './mainLayout.module.scss'
 
@@ -12,7 +12,7 @@ interface LayoutProps {
     header?: JSX.Element
 }
 
-export const MainLayout = ({ children, header, title = 'add title for SEO', description = 'add description for SEO' }: LayoutProps) => {
+export const MainLayout = ({ children,  title = 'add title for SEO', description = 'add description for SEO' }: LayoutProps) => {
     const windowWidth = useWindowSize()[0]
     return (
         <>
@@ -23,11 +23,9 @@ export const MainLayout = ({ children, header, title = 'add title for SEO', desc
                 <meta charSet='utf-8' />
             </Head>
             <Navigation />
-
-            {header && <header>{header}</header>}
-            <main>
+            <div>
                 {children}
-            </main>
+            </div>
             <footer>
 
             </footer>

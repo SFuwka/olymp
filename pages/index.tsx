@@ -1,6 +1,8 @@
 import type { NextPage } from 'next'
-import { ActionTop } from '../components/actionTop/ActionTop'
+import React from 'react'
+import { Divider } from '../components/divider/Divider'
 import { Header } from '../components/header/Header'
+import { ModalWindow } from '../components/modal/ModalWindow'
 import { MainLayout } from '../layouts/MainLayout'
 
 
@@ -8,11 +10,12 @@ import { MainLayout } from '../layouts/MainLayout'
 const Home: NextPage = () => {
 
   return (
-    <MainLayout header={Header()} title='Olymp | Home' description='Rhythmic gymnastics in Pusnik'>
-
-      <ActionTop />
-
-    </MainLayout>
+    <React.StrictMode>
+      <MainLayout title='Olymp | Home' description='Rhythmic gymnastics in Pusnik'>
+        <Header/>
+        <Divider />
+      </MainLayout>
+    </React.StrictMode>
   )
 }
 
