@@ -2,6 +2,11 @@
 @import "../../styles/variables.scss";
 @import "../../styles/mixins.scss";
 .root {
+    @media screen and(max-width: 750px) {
+        width: 100%;
+        @include flexCenter;
+        padding: space(2);
+    }
     form {
         display: flex;
     }
@@ -41,7 +46,10 @@
     }
 
     @media screen and(max-width: 900px) {
-        width: 100%;
+        width: max-content;
+    }
+    @media screen and(max-width: 400px) {
+        font-size: 13px;
     }
 }
 

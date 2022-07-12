@@ -7,6 +7,12 @@
     top: 120px;
     display: flex;
     flex-direction: row-reverse;
+    @media screen and(max-width: 750px) {
+        position: static;
+        top: 0;
+        display: flex;
+        flex-direction: row;
+    }
 }
 
 .wrapper {
@@ -28,6 +34,19 @@
         padding: space(2);
         padding-right: space(4);
     }
+    @media screen and(max-width: 750px) {
+        max-width: 100%;
+        width: 100%;
+        justify-content: center;
+        background-color: $mainGrey;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0;
+        padding: space(2);
+    }
+    @media screen and(max-width: 400px) {
+        padding: 0;
+    }
 
     p {
         color: #efefef;
@@ -43,11 +62,17 @@
         @media screen and(max-width: 1000px) {
             font-size: 24px;
         }
+        @media screen and(max-width: 400px) {
+            font-size: 20px;
+        }
         span {
             font-size: 50px;
             font-weight: 800;
             @media screen and(max-width: 1000px) {
                 font-size: 40px;
+            }
+            @media screen and(max-width: 400px) {
+                font-size: 30px;
             }
             &:nth-child(2) {
                 color: $aquaBlue;
@@ -87,6 +112,9 @@
             color: $pink;
             transition: all 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
         }
+        @media screen and(max-width: 400px) {
+            font-size: 14px;
+        }
     }
 }
 
@@ -96,9 +124,13 @@
         margin-bottom: space(1);
         color: $pinkB;
         font-size: 15px;
+        @media screen and(max-width: 400px) {
+            font-size: 13px;
+        }
         span {
             font-size: 20px;
             color: $aquaBlue;
         }
+        
     }
 }

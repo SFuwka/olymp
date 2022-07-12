@@ -29,7 +29,9 @@ export const ActionTop = () => {
                 </div>
                 <div className={styles.actionCall}> <h3>Запишитесь на первое занятие совершенно <br />
                     <span>БЕСПЛАТНО</span></h3></div>
-                {windowWidth > 900 ? <TelegramForm /> : <TelegramButton onClick={openModal}>Записаться на пробное занятие</TelegramButton>}
+                {windowWidth > 900 || windowWidth < 750 && windowWidth > 450
+                    ? <TelegramForm />
+                    : <TelegramButton onClick={openModal}>Записаться на пробное занятие</TelegramButton>}
                 <p>Мы перезвоним вам и согласуем время</p>
             </div>
             <ModalWindow handleClose={handleClose} open={modalOpened}>

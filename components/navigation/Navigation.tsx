@@ -24,16 +24,16 @@ export const Navigation = () => {
     }
 
     useEffect(() => {
-        if (windowWidth > 480 && menuOpen) setMenuOpen(false)
+        if (windowWidth > 500 && menuOpen) setMenuOpen(false)
     }, [windowWidth, menuOpen])
 
     return (
         <nav className={styles.nav}>
             <div className={styles.navContainer}>
-                {windowWidth > 480 && <div className={styles.logo}><Link href={'/'}><a><Logo color='#fff' /></a></Link></div>}
-                {windowWidth <= 480 && <BurgerButton onClick={handleBurgerClick} />}
+                {windowWidth > 500 && <div className={styles.logo}><Link href={'/'}><a><Logo color='#fff' /></a></Link></div>}
+                {windowWidth <= 500 && <BurgerButton onClick={handleBurgerClick} />}
                 <div className={styles.navLinks}>
-                    {windowWidth > 480 && <div>
+                    {windowWidth > 500 && <div>
                         {linksJsx.map((link) => {
                             return link
                         })}
