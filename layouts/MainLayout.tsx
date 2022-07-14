@@ -12,7 +12,7 @@ interface LayoutProps {
     header?: JSX.Element
 }
 
-export const MainLayout = ({ children,  title = 'add title for SEO', description = 'add description for SEO' }: LayoutProps) => {
+export const MainLayout = ({ children, title = 'add title for SEO', description = 'add description for SEO' }: LayoutProps) => {
     const windowWidth = useWindowSize()[0]
     return (
         <>
@@ -23,11 +23,9 @@ export const MainLayout = ({ children,  title = 'add title for SEO', description
                 <meta charSet='utf-8' />
             </Head>
             <Navigation />
-            <div>
                 {children}
-            </div>
             <footer>
-
+                <div style={{ backgroundColor: 'black', color: 'white' }}>footer</div>
             </footer>
         </>
     )
