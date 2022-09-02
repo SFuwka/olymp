@@ -2,6 +2,82 @@
 @import "../../styles/variables.scss";
 @import "../../styles/mixins.scss";
 
-.root{
-   
+.root {
+    img {
+        height: 200px;
+        display: block;
+        margin: 0;
+        border-radius: 13px;
+        box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+}
+
+.cardRoot {
+    width: 300px;
+    height: 100%;
+    background-color: $cardGrey;
+    border-radius: 13px 13px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2{
+        padding: space(2);
+        padding-bottom: 0;
+        font-size: 14px;
+        margin: 0;
+    }
+    h3 {
+        font-size: 15px;
+        color: #000;
+        text-align: center;
+        span{
+            color: $pinkB;
+        }
+    }
+    button{
+        padding: 0;
+        margin-top: space(2);
+        margin-bottom: space(2);
+        background-color: transparent;
+        border: none;
+        font-size: 14px;
+        text-transform: uppercase;
+        color: $aqua;
+        cursor: pointer;
+        &:hover{
+            color: $pinkB;
+        }
+    }
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    @media screen and (max-width:990px) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.cardContent {
+    padding: space(2);
+}
+
+.sentence {
+    display: flex;
+    align-items: flex-start;
+    gap: space(1);
+    margin-top: space(1);
+    p {
+        font-size: 14px;
+        font-weight: 300;
+        margin: 0;
+    }
+    .svgContainer {
+        transform: translateY(-2px);
+        min-width: 13px;
+    }
 }

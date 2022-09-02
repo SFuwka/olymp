@@ -1,0 +1,70 @@
+@import "../../styles/functions.scss";
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.root {
+    h1 {
+        display: block;
+        text-align: center;
+    }
+}
+
+.cardRoot {
+    user-select: none;
+    border-radius: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+        cursor: grab;
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        object-position: 100% 0;
+        border-radius: 100%;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+}
+
+.pagination {
+    position: static !important;
+    .bullet {
+        margin-left: 6px !important;
+        margin-right: 6px !important;
+        background-color: $aquaBlue;
+        opacity: 0.3;
+    }
+    .activeBullet {
+        background-color: $pink;
+        opacity: 1;
+        transform: scale(1.5);
+        box-shadow: 0 0 10px 4px rgba(203, 93, 149, 0.4);
+        transition: box-shadow 0.5s, transform 0.5s;
+    }
+}
+
+.cursorOn4Slides {
+    img {
+        cursor: pointer;
+    }
+}
+
+.swiperWrapper {
+    opacity: 1;
+    min-height: 430px;
+    position: relative;
+}
+
+.swiper {
+    display: block;
+}
+
+.swiperHide {
+    display: none;
+}
+
+.coachCard {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}

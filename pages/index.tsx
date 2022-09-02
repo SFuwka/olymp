@@ -7,7 +7,6 @@ import { Container } from '../components/container/Container'
 import { Divider } from '../components/divider/Divider'
 import { GroupsAndPrices } from '../components/groupsAndPrices/GroupsAndPrices'
 import { Header } from '../components/header/Header'
-import { ModalWindow } from '../components/modal/ModalWindow'
 import { useWindowSize } from '../helpFunctions/hooks/windowSize'
 import { MainLayout } from '../layouts/MainLayout'
 
