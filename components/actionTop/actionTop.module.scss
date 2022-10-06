@@ -51,6 +51,12 @@
         padding-bottom: space(2);
     }
 
+    @media screen and(max-width: 330px) {
+        button{
+            font-size: 12px;
+        }
+    }
+
     p {
         color: #efefef;
         margin: 0;
@@ -104,7 +110,7 @@
 }
 
 .adressLinks {
-    h3 {
+    p {
         color: #000;
         margin-top: 4px;
         margin-bottom: 4px;
@@ -122,7 +128,7 @@
 }
 
 .actionCall {
-    h3 {
+    strong {
         margin-top: space(1);
         margin-bottom: space(1);
         color: $pinkB;
@@ -134,5 +140,11 @@
             font-size: 20px;
             color: $pink;
         }
+    }
+}
+
+.trialRequestSended{
+    p{
+        margin: 0;
     }
 }

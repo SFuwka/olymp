@@ -1,0 +1,71 @@
+@import "../../styles/mixins.scss";
+.root {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba($color: #000000, $alpha: 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper {
+    width: fit-content;
+    z-index: 10000;
+    position: relative;
+}
+
+.moveTop {
+    top: -90px;
+}
+
+.notificatonRoot {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1001;
+    width: 200px;
+    height: 70px;
+}
+
+.notificationWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 200px;
+    height: 50px;
+    left: 0;
+    position: absolute;
+    background-color: rgb(127, 255, 159);
+    border-radius: 0 5px 5px 0;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    transition: all 0.3s ease-in;
+}
+
+.notificationOpen {
+    transform: translateX(0px);
+    opacity: 1;
+}
+
+.notificationClosed {
+    transform: translateX(-200px);
+    opacity: 0;
+}
+
+.closeIcon {
+    height: 30px;
+    svg {
+        -webkit-filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.7));
+        filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.7));
+    }
+
+    svg:hover {
+        -webkit-filter: drop-shadow(4px 4px 3px rgba(0, 0, 0, 0.7));
+        filter: drop-shadow(4px 4px 3px rgba(0, 0, 0, 0.7));
+        cursor: pointer;
+    }
+}

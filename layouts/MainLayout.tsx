@@ -1,9 +1,9 @@
 import Head from 'next/head'
 import React from 'react'
+import Footer from '../components/footer/Footer'
 import { Navigation } from '../components/navigation/Navigation'
 import { useWindowSize } from '../helpFunctions/hooks/windowSize'
 
-import styles from './mainLayout.module.scss'
 
 interface LayoutProps {
     title?: string
@@ -23,9 +23,9 @@ export const MainLayout = ({ children, title = 'add title for SEO', description 
                 <meta charSet='utf-8' />
             </Head>
             <Navigation />
-                {children}
+            {children}
             <footer>
-                <div style={{ backgroundColor: 'black', color: 'white' }}>footer</div>
+                <Footer />
             </footer>
         </>
     )

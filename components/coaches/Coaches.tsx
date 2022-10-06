@@ -13,9 +13,9 @@ const coaches = [
     name: 'Евгения Игоревна',
     fullName: 'Евгения Игоревна Кузенкова',
     src: '/images/coaches/evgenia_small.jpg',
-    srcBIg: 'images/evgenia.jpg',
+    srcBIg: 'images/coaches/evgenia.jpg',
     position: 'Старший тренер',
-    positionDirection: `Старший тренер по художественной гимнастике,
+    positionDirection: `Старший тренер отделения по художественной гимнастике,
       Тренер групп начальной подготовки.
       Тренер групп спортивного совершенствования.`,
     id: 'evgeniya',
@@ -31,13 +31,13 @@ const coaches = [
     name: 'Виктория Игоревна',
     fullName: 'Виктория Игоревна Леляк',
     src: '/images/coaches/viktoria_small.jpg',
-    srcBIg: 'images/viktoria.jpg',
+    srcBIg: 'images/coaches/viktoria.jpg?webp',
     position: 'Тренер',
     positionDirection: `Тренер групп спортивного совершенствования,
       Тренер групп начальной подготовки.`,
     id: 'viktoria',
     info: [`Мастер спорта России.`,
-      `Стаж с 2009 года, 9 лет работы в СШОР пушкинского района. Тренер победителей и призеров международных всероссийских и городских соревнований.`,
+      `Стаж с 2009 года, 9 лет работы в СШОР пушкинского района. Тренер победителей и призеров международных, всероссийских и городских соревнований.`,
       `Высшее образование НГУ им. П.Ф. Лесгафта, кафедра теории и методики гимнастики, 2011 год.`,
       `В прошлом призер чемпионата и кубка по художественной гимнастике города Санкт-Петербурга.`]
   },
@@ -45,32 +45,33 @@ const coaches = [
     name: 'Екатерина Сергеевна',
     fullName: 'Екатерина Сергеевна Иванченкова',
     src: '/images/coaches/ekaterina_small.jpg',
-    srcBIg: 'images/ekaterina.jpg',
+    srcBIg: 'images/coaches/ekaterina.jpg',
     position: 'Тренер',
     id: 'ekaterina',
-    positionDirection: `Старший тренер по художественной гимнастике. 
-      Тренер групп начальной подготовки. 
-      Тренер групп спортивного совершенствования.`,
-    info: [`toDO`]
+    positionDirection: `Тренер групп начальной подготовки.`,
+    info: [`Мастер спорта России.`,
+      `Образование - Высшее  НГУ им. П.Ф. Лесгафта, кафедра теории и методики гимнастики`,
+      `За свою спортивную карьеру становилась призером чемпионатов и кубков по художественной гимнастике города Санкт-Петербурга.`]
   },
   {
     name: 'Карина Владимировна',
     fullName: 'Карина Владимировна Бигеева',
     src: '/images/coaches/karina_small.jpg',
-    srcBIg: 'images/karina.jpg',
+    srcBIg: 'images/coaches/karina.jpg',
     position: 'Тренер',
-    positionDirection: `Тренер групп спортивного совершенствования,
-      Тренер групп начальной подготовки.`,
+    positionDirection: `Тренер групп начальной подготовки.`,
     id: 'karina',
-    info: [`toDo2`]
+    info: [`Кандидат В Мастера спорта России.`,
+      `Образование - студентка 3-го курса НГУ им. П.Ф. Лесгафта, кафедра теории и методики гимнастики`,
+      `Воспитанница нашего Клуба.`,
+      `Является призёром всеросийских и международных соревнований.`]
   }
 ]
 
 export const Coaches = () => {
   const windowWidth = useWindowSize()[0]
-  const [activeCoach, setActiveCoach] = useState<typeof coaches[number]>()
-  const [slidesPerView, setSlidesPerView] = useState(4)
-
+  const [activeCoach, setActiveCoach] = useState<typeof coaches[number]>(coaches[0])
+  const [slidesPerView, setSlidesPerView] = useState(1)
 
   useEffect(() => {
     if (windowWidth >= 1000) setSlidesPerView(4)
@@ -85,11 +86,10 @@ export const Coaches = () => {
   }
 
   return (
-    <section className={styles.root}>
+    <section id='coaches' className={styles.root}>
       <h2>НАШИ ТРЕНЕРЫ</h2>
-      <div className={styles.swiperWrapper}>
+      <article>
         <Swiper
-          className={styles.swiper}
           onSlideChange={(swiper) => handleSlidehange(swiper.realIndex)}
           slidesPerView={slidesPerView}
           spaceBetween={40}
@@ -112,8 +112,16 @@ export const Coaches = () => {
             </SwiperSlide>
           })}
         </Swiper>
-        {activeCoach && <div className={styles.coachCard}><CoachCard info={activeCoach.info}></CoachCard></div>}
-      </div>
+        {activeCoach && <div id='CoachInfo' className={styles.coachCard}>
+          <CoachCard
+            fullName={activeCoach.fullName}
+            position={activeCoach.position}
+            positionDirection={activeCoach.positionDirection}
+            info={activeCoach.info}
+            src={activeCoach.srcBIg}
+          ></CoachCard>
+        </div>}
+      </article>
     </section>
   )
 }

@@ -5,13 +5,13 @@
     z-index: -1;
     background-color: rgb(192, 196, 199);
  
-    background-image: url("../../public/images/main1920.jpg");
+    background-image: url("/images/main1920.webp");
     background-size: cover;
     background-position-y: 40%;
     background-repeat: no-repeat;
 
     @media screen and (max-width: 1000px) {
-        background-image: url("../../public/images/main.jpg");
+        background-image: url("/images/main.webp");
         height: 550px;
     }
     //toDo new photo with square ratio

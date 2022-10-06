@@ -1,7 +1,7 @@
 import clsx from 'clsx'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
-import { Instagram } from '../../assets/svg/InstagramSvg'
+import { Instagram } from '../../assets/svg/InstagramIcon'
 import { Logo } from '../../assets/svg/LogoSvg'
 import { Telegram } from '../../assets/svg/TelegramSvg'
 import { Vk } from '../../assets/svg/VkSvg'
@@ -14,6 +14,7 @@ const linksJsx = [
     <Link key='scheduleNav' href={'/#schedule'}><a>расписание</a></Link>,
     <Link key='pricesNav' href={'/#prices'}><a>цены</a></Link>,
     <Link key='competitionsNav' href={'/#competitions'}><a>соревнования и сборы</a></Link>,
+    <Link key='galleryNav' href={'/#gallery'}><a>галерея</a></Link>,
 ]
 
 export const Navigation = () => {
@@ -30,7 +31,7 @@ export const Navigation = () => {
     return (
         <nav className={styles.nav}>
             <div className={styles.navContainer}>
-                {windowWidth > 500 && <div className={styles.logo}><Link href={'/'}><a><Logo color='#fff' /></a></Link></div>}
+                {windowWidth > 730 && <div className={styles.logo}><Logo color='#fff' /></div>}
                 {windowWidth <= 500 && <BurgerButton onClick={handleBurgerClick} />}
                 <div className={styles.navLinks}>
                     {windowWidth > 500 && <div>
@@ -47,9 +48,9 @@ export const Navigation = () => {
                     </div>}
                     <div className={styles.socialAndPhones}>
                         <div className={styles.social}>
-                            <Link href={'#'}><a><Vk width={30} height={30} /></a></Link>
-                            <Link href={'#'}><a><Instagram width={30} height={30} /></a></Link>
-                            <Link href={'#'}><a><Telegram /></a></Link>
+                            <Link href={'https://vk.com/olymp_pushkin'}><a target='_blank'><Vk width={30} height={30} /></a></Link>
+                            <Link href={'https://www.instagram.com/gymnastika_spb/'}><a target='_blank'><Instagram width={30} height={30} /></a></Link>
+                            <Link href={'https://t.me/olymp_puskin'}><a target='_blank'><Telegram /></a></Link>
                         </div>
                         <div className={styles.phones}>
                             <a href="tel:+79516667113">+7 (951) 666 71 13</a>

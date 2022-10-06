@@ -3,12 +3,23 @@
 @import "../../styles/mixins.scss";
 
 .root {
+    .imageWrapper{
+        span{
+            display: inline !important;
+        }
+    }
     img {
         height: 200px;
         display: block;
         margin: 0;
         border-radius: 13px;
         box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+    @media screen and (max-width: 310px) {
+        img {
+            width: 250px;
+            height: auto;
+        }
     }
 }
 
@@ -20,7 +31,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    h2{
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    h2 {
         padding: space(2);
         padding-bottom: 0;
         font-size: 14px;
@@ -30,11 +42,11 @@
         font-size: 15px;
         color: #000;
         text-align: center;
-        span{
+        span {
             color: $pinkB;
         }
     }
-    button{
+    button {
         padding: 0;
         margin-top: space(2);
         margin-bottom: space(2);
@@ -44,9 +56,18 @@
         text-transform: uppercase;
         color: $aqua;
         cursor: pointer;
-        &:hover{
+        &:hover {
             color: $pinkB;
         }
+    }
+    .buttonDisabled {
+        cursor: default;
+        &:hover {
+            color: $aqua;
+        }
+    }
+    @media screen and (max-width: 310px) {
+        width: 250px;
     }
 }
 
@@ -56,7 +77,7 @@
     justify-content: center;
     gap: 20px;
 
-    @media screen and (max-width:990px) {
+    @media screen and (max-width: 990px) {
         flex-direction: column;
         align-items: center;
     }

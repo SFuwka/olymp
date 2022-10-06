@@ -2,7 +2,7 @@ import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
     return (
-        <Html>
+        <Html lang='ru'>
             <Head >
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='anonymous' />
@@ -11,6 +11,7 @@ export default function Document() {
             <body>
                 <Main />
                 <div id="modal" />
+                <div id='notification' />
                 <NextScript />
             </body>
         </Html>

@@ -1,0 +1,82 @@
+@import "../../styles/functions.scss";
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+.container {
+    background: #54687a;
+    color: #fff;
+}
+.phones {
+    color: #fff;
+    padding: space(3);
+    padding-left: 15px;
+    div {
+        display: flex;
+        align-items: center;
+        margin-top: space(1);
+        margin-left: space(1);
+        @media screen and(max-width: 500px) {
+            flex-wrap: wrap;
+        }
+        p {
+            margin-left: space(2);
+            @media screen and(max-width: 500px) {
+                margin: 0;
+                padding: space(1);
+            }
+        }
+        a:hover {
+            color: $pink;
+        }
+    }
+}
+
+.adress {
+    padding-left: space(3);
+    padding-right: space(3);
+    p {
+        display: block;
+        font-size: 1.17em;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+    }
+    a {
+        display: block;
+        transition: all 0.2s ease-in;
+        padding-left: space(1);
+        padding-top: space(1);
+    }
+    a:hover {
+        color: $pink;
+    }
+}
+
+.socialButtons {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.socialButton {
+    width: 50px;
+    height: 50px;
+    svg {
+        transform: scale(1.3);
+    }
+}
+.telegram {
+    svg {
+        border-radius: 50%;
+        background: #27a5e5;
+    }
+}
+.list {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    li {
+        padding-left: space(2);
+        padding-right: space(2);
+    }
+}

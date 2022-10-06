@@ -49,22 +49,57 @@
     }
 }
 
-.swiperWrapper {
-    opacity: 1;
-    min-height: 430px;
-    position: relative;
+.coachCardRoot {
+    margin-top: space(2);
+    display: flex;
+    justify-content: space-between;
+    .picture {
+        display: flex;
+        align-items: center;
+        max-width: 60%;
+        img {
+            width: 100%;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 4px 0px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 20px;
+        }
+    }
+    @media screen and(max-width: 770px) {
+        flex-direction: column-reverse;
+        .picture {
+            max-width: 100%;
+        }
+        .info {
+            width: 100%;
+        }
+    }
 }
 
-.swiper {
-    display: block;
+.info {
+    width: 40%;
+    margin-top: space(2);
+    padding-right: $spacing;
+    .sentence {
+        display: flex;
+        div {
+            margin-right: $spacing;
+        }
+    }
+    h4 {
+        font-size: 24px;
+        color: $aqua;
+        font-weight: 500;
+        margin: 0;
+    }
+    h5 {
+        font-size: 14px;
+        color: $pink;
+        font-weight: 500;
+        margin: 0;
+        margin-bottom: space(2);
+    }
+    p {
+        font-size: 14px;
+        margin: 0;
+    }
 }
 
-.swiperHide {
-    display: none;
-}
-
-.coachCard {
-    position: absolute;
-    top: 0;
-    z-index: 1;
-}

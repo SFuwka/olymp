@@ -25,19 +25,24 @@
         font-size: 20px;
         &:hover {
             color: $pink;
-            transition: all .7s cubic-bezier(0.165, 0.84, 0.44, 1);
+            transition: all 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
-        @media screen and(max-width: 1100px) {
+        @media screen and(max-width: 1200px) {
             margin-right: space(1);
             margin-left: space(1);
         }
+
+        @media screen and(max-width: 1100px) {
+            font-size: 17px;
+        }
         @media screen and(max-width: 1000px) {
             margin-right: space(1);
-            font-size: 18px;
+            font-size: 16px;
         }
         @media screen and(max-width: 700px) {
             font-size: 14px;
         }
+       
     }
     @media screen and(max-width: 900px) {
         flex-direction: column-reverse;
@@ -108,7 +113,7 @@
 .menu {
     margin-top: 5px;
     position: absolute;
-    background-color: rgba($color: #000, $alpha: .7);
+    background-color: rgba($color: #000, $alpha: 0.7);
     padding: space(2);
     left: 0;
     top: 70px;
@@ -126,13 +131,13 @@
             }
         }
     }
-    transition: .3s all ease-in-out;
+    transition: 0.3s all ease-in-out;
 }
 
-.menuClosed{
+.menuClosed {
     transform: translateX(-200px);
 }
 
-.menuOpen{
+.menuOpen {
     transform: translateX(0px);
 }

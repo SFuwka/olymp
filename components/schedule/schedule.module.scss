@@ -1,0 +1,236 @@
+@import "../../styles/functions.scss";
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.chooseGroupButtons {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    button {
+        font-weight: 700;
+        margin: space(2);
+        border: none;
+        border-radius: 10px;
+        min-height: 84px;
+        width: 150px;
+        padding: space(2);
+        text-transform: uppercase;
+        cursor: pointer;
+        box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+        &:nth-child(1) {
+            background-color: rgb(160, 235, 172);
+        }
+        &:nth-child(2) {
+            background-color: rgb(221, 235, 160);
+        }
+        &:nth-child(3) {
+            background-color: #ebaaa0;
+        }
+    }
+}
+
+.groupsSubList {
+    h3 {
+        text-align: center;
+        text-transform: uppercase;
+        color: $pink;
+    }
+}
+
+.accordion {
+    h3 {
+        margin: 0;
+        font-size: 20px;
+        line-height: 1.2;
+    }
+
+    label {
+        display: block;
+        overflow: hidden;
+    }
+
+    .title {
+        padding: space(1);
+        position: relative;
+        z-index: 599;
+        background: $cardGrey;
+        transition: all 0.3s linear;
+        box-shadow: 0px 4px 4px rgb(0 0 0 / 25%), 4px 0px 4px rgb(0 0 0 / 25%);
+        &:hover {
+            cursor: pointer;
+            background: #ce84aa;
+        }
+        div {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        button {
+            min-height: 40px;
+            text-transform: uppercase;
+            box-shadow: 0px 4px 4px rgb(0 0 0 / 25%), 4px 0px 4px rgb(0 0 0 / 25%);
+            background-color: #cbd9a3;
+            border-radius: 10px;
+            display: inline;
+            cursor: pointer;
+            border: none;
+            color: #000;
+            &:hover {
+                background-color: $pink;
+            }
+        }
+        p {
+            padding: space(1);
+            margin: 0;
+            border-radius: 10px;
+        }
+        p:nth-child(1) {
+            background-color: #ebaaa0;
+            min-width: 176px;
+            padding: space(1);
+            border-radius: 10px;
+            color: #000;
+        }
+        p:nth-child(2) {
+            min-width: 65px;
+            background-color: $aqua;
+            color: #fff;
+        }
+        p:nth-child(3) {
+            min-width: 118px;
+            background-color: $aquaBlue;
+            color: #fff;
+        }
+        p:nth-child(4) {
+            background-color: #cbd9a3;
+            color: #000;
+        }
+        svg {
+            align-self: center;
+            margin-left: auto;
+            margin-right: 10px;
+            transition: transform 0.3s ease-in-out;
+            @media screen and(max-width:768px) {
+                margin-left: auto;
+                margin-right: auto;
+                justify-self: center;
+            }
+        }
+    }
+
+    .content {
+        position: relative;
+        overflow: hidden;
+        padding-left: space(2);
+        padding-right: space(2);
+        max-height: 0px;
+        transition: max-height 0.4s ease-in;
+
+        .squad {
+            padding: space(1);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            transform: translateY(-350px);
+            transition: all 0.3s ease-in;
+            @media screen and(max-width:768px) {
+                transform: translateY(-400px);
+            }
+            @media screen and(max-width:460px) {
+                transform: translateY(-650px);
+            }
+            div:nth-child(1) {
+                background-color: #97dcc8;
+                border-radius: 10px;
+            }
+            p:nth-child(2) {
+                min-width: 177px;
+                background-color: #ebaaa0;
+                border-radius: 10px;
+            }
+            p:nth-child(3) {
+                background-color: #767dd0;
+                border-radius: 10px;
+                color: #fff;
+            }
+            p:nth-child(4) {
+                background-color: #1e6280;
+                border-radius: 10px;
+                color: #fff;
+            }
+        }
+
+        .squadDayAndTime {
+            display: flex;
+            justify-content: space-between;
+            min-width: 182px;
+            .day {
+                min-width: 97px;
+            }
+        }
+
+        div {
+            display: flex;
+            align-items: center;
+            min-width: 13px;
+        }
+
+        p {
+            text-transform: capitalize;
+            position: relative;
+            padding: space(1);
+            margin: 0;
+            opacity: 0;
+            //transform: translateY(-100px);
+            transition: all 0.3s ease-in;
+        }
+
+        .container {
+            transform: translateY(-100px);
+            transition: all 0.3s ease-in;
+        }
+    }
+
+    input[type="checkbox"] {
+        display: none;
+    }
+
+    input[type="checkbox"]:checked + .title {
+        background: $pink;
+        h3 {
+            background-color: $cardGrey;
+        }
+        svg {
+            transform: rotate(-540deg);
+        }
+    }
+
+    input[type="checkbox"]:checked + .title + .content {
+        max-height: 650px;
+        .squad {
+            transform: translateY(0px);
+        }
+        .container {
+            transform: translateY(0px);
+        }
+    }
+
+    input[type="checkbox"]:checked + .title + .content p {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.firstLabel {
+    border-radius: 10px 10px 0 0;
+}
+
+.lastLabel {
+    border-radius: 0 0 10px 10px;
+}
+
+.squad {
+    &:nth-child(odd) {
+        background-color: #cbcbcb;
+    }
+}

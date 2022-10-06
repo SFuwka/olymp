@@ -10,7 +10,7 @@ export const AdvantageCard = ({ children, heading, description }: advantageCardP
     return (
         <article className={styles.cardRoot}>
             <div>{children}</div>
-            <h3>{heading}</h3>
+            <header>{heading}</header>
             <p>{description}</p>
         </article>
     )

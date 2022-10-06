@@ -1,0 +1,90 @@
+@import "../../../styles/functions.scss";
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+
+.accordion {
+    h3 {
+        margin: 0;
+        font-size: 20px;
+        line-height: 1.2;
+    }
+
+    label {
+        display: block;
+        overflow: hidden;
+    }
+
+    .title {
+        padding: space(2) space(4);
+        position: relative;
+        z-index: 599;
+        background: $cardGrey;
+        transition: all 0.3s linear;
+        box-shadow: 0px 4px 4px rgb(0 0 0 / 25%), 4px 0px 4px rgb(0 0 0 / 25%);
+        &:hover {
+            cursor: pointer;
+            background: #ce84aa;
+        }
+    }
+
+    .content {
+        position: relative;
+        overflow: hidden;
+        padding-left: space(2);
+        padding-right: space(2);
+        max-height: 0px;
+        transition: max-height 0.4s ease-in;
+
+        div {
+            display: flex;
+            align-items: center;
+            min-width: 13px;
+        }
+
+        p {
+            position: relative;
+            padding: space(1);
+            margin: 0;
+            opacity: 0;
+            transform: translateY(-100px);
+            transition: all 0.3s ease-in;
+        }
+
+        svg {
+            min-width: 13px;
+            transform: translateY(-100px);
+            opacity: 0;
+            transition: all 0.3s ease-in;
+        }
+    }
+
+    input[type="checkbox"] {
+        display: none;
+    }
+
+    input[type="checkbox"]:checked + .title {
+        background: $pink;
+    }
+
+    input[type="checkbox"]:checked + .title + .content {
+        max-height: 555px;
+        svg {
+            min-width: 13px;
+            transform: translateY(0px);
+            opacity: 1;
+        }
+    }
+
+    input[type="checkbox"]:checked + .title + .content p {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.firstLabel {
+    border-radius: 10px 10px 0 0;
+}
+
+.lastLabel {
+    border-radius: 0 0 10px 10px;
+}

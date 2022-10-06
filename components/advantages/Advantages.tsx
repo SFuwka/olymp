@@ -15,8 +15,8 @@ const cards = [
     {
         key: 'childCard',
         child: <ChildSvg />,
-        heading: 'ЗАНЯТИЯ С ДЕТЬМИ ОТ 3-Х ЛЕТ',
-        description: 'У нас дети могут заниматься гимнастикой начиная с трех лет.'
+        heading: 'Принимаем в группы начальной подготовки детей от 3 до 13 лет'.toUpperCase(),
+        description: 'Занятия с детьми любого возраста начиная с трех лет.'
     },
     {
         key: 'competitionCard',
