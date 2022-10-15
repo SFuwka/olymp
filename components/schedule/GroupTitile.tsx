@@ -22,13 +22,11 @@ export const GroupTitle = ({ adress, age, coach }: IGropupCard) => {
         if (force) return setModalOpened(false)
     }
     return <div>
-
+        <ExpandMore />
         <p>{adress}</p>
         <p>{age}</p>
         <p>{coach}</p>
         {!context.state.TrialRequestSended && <button onClick={openModal}>записаться</button>}
-
-        <ExpandMore />
         <ModalWindow form={true} handleClose={handleClose} open={modalOpened}><TelegramForm closeModal={handleClose} inModal={true} /></ModalWindow>
     </div>
 }

@@ -244,7 +244,7 @@ export const GroupScheduleCard = ({ i, group, length }: IGroupScheduleCard) => {
 
 
 export const Schedule = () => {
-  const [currentGroup, setCurrentGroup] = useState<string | null>(null)
+  const [currentGroup, setCurrentGroup] = useState<string | null>('np')
   const scrollRef = useRef<HTMLElement | null>(null)
 
   const handleSelection = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -278,15 +278,15 @@ export const Schedule = () => {
           {squadGroups.map((group, i) => {
             return <label key={group.id} className={styles.accordion} htmlFor={group.id}>
               <input id={group.id} type="checkbox" />
-              <div className={clsx(styles.title,
+              <div className={clsx(styles.title,styles.squadTitile,
                 i === 0 || i === squadGroups.length - 1 ? i === 0 ? styles.firstLabel : styles.lastLabel : undefined)}>
                 <div>
+                  <ExpandMore />
                   <p>{group.age}</p>
                   {group.coaches.map((coach, i) => {
                     return <p key={i}>{coach}</p>
                   })}
                   <p>индивидуальные занятия</p>
-                  <ExpandMore />
                 </div>
               </div>
               <div className={styles.content}>

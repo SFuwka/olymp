@@ -1,32 +1,11 @@
 import React from 'react'
 import { Gallery } from './Gallery'
 
-const bootCampImages = [ //before database setup
-    { url: '/images/bootcamp/1.jpg', alt: 'test' },
-    { url: '/images/bootcamp/3.jpg', alt: 'test' },
-    { url: '/images/bootcamp/5.jpg', alt: 'test' },
-]
-
-const bootCampImagesHighRes = [ //before database setup
-    { url: '/images/bootcamp/2.jpg', alt: 'test' },
-    { url: '/images/bootcamp/4.jpg', alt: 'test' },
-    { url: '/images/bootcamp/5.jpg', alt: 'test' },
-]
-
-const competitionsImages = [
-    { url: '/images/competitions/5.webp', alt: 'test' },
-    { url: '/images/competitions/6.webp', alt: 'test' },
-    { url: '/images/competitions/1.jpg', alt: 'test' },
-    { url: '/images/competitions/4.jpg', alt: 'test' },
-    { url: '/images/competitions/3.jpg', alt: 'test' },
-]
-const competitionsImagesHighRes = [
-    { url: '/images/competitions/5High.webp', alt: 'test' },
-    { url: '/images/competitions/6High.webp', alt: 'test' },
-    { url: '/images/competitions/1.jpg', alt: 'test' },
-    { url: '/images/competitions/4.jpg', alt: 'test' },
-    { url: '/images/competitions/3.jpg', alt: 'test' },
-]
+import {
+    bootCampImages, bootCampImagesHighRes, competitionsImages, competitionsImagesHighRes,
+    gymsMalayaImages, gymsMalayaImagesHighRes, gymsPolkImages, gymsPolkImagesHighRes, gymsTolImages, gymsTolImagesHighRes
+} from './paths'
+import styles from './galleries.module.scss'
 
 
 export const Galleries = () => {
@@ -46,10 +25,16 @@ export const Galleries = () => {
                 </p>
                 <p> Мы стараемся совместить усердные
                     тренировки с новыми впечатлениями.</p>
-                <Gallery slides={bootCampImages} highResSlides={bootCampImagesHighRes}/>
+                <Gallery slides={bootCampImages} highResSlides={bootCampImagesHighRes} />
             </section>
-            <section id='gyms'>
+            <section id='gyms' className={styles.gymsRoot}>
                 <h2>наши залы</h2>
+                <h3>Малая улица, 9/3</h3>
+                <Gallery slides={gymsMalayaImages} highResSlides={gymsMalayaImagesHighRes} />
+                <h3>Бульвар Алексея Толстого 50/1</h3>
+                <Gallery slides={gymsTolImages} highResSlides={gymsTolImagesHighRes} />
+                <h3>Полковая 1/25</h3>
+                <Gallery showBullets={2} slides={gymsPolkImages} highResSlides={gymsPolkImagesHighRes} />
             </section>
         </>
     )

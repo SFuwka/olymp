@@ -1,14 +1,13 @@
 import type { NextPage } from 'next'
 import React from 'react'
-import { CloseIcon } from '../assets/svg/CloseIcon'
 import { ActionTop } from '../components/actionTop/ActionTop'
 import { Advantages } from '../components/advantages/Advantages'
-import Bootcamp from '../components/bootcamp/Bootcamp'
 import { Coaches } from '../components/coaches/Coaches'
 import { Container } from '../components/container/Container'
 import { Divider } from '../components/divider/Divider'
 import { FAQ_root } from '../components/FAQ/FAQ_root'
 import { Galleries } from '../components/galleries/Galleries'
+import { GridGallery } from '../components/galleries/GridGallery'
 import { GroupsAndPrices } from '../components/groupsAndPrices/GroupsAndPrices'
 import { Header } from '../components/header/Header'
 import { Notification } from '../components/portals/Notification'
@@ -36,7 +35,7 @@ const Home: NextPage = () => {
             <Schedule />
             <FAQ_root />
             <Galleries />
-            <div style={{ height: 500, position: 'relative' }}><h1 style={{ position: 'absolute', bottom: 20 }}>TEMP</h1></div>
+            <GridGallery />
           </Container>
         </main>
         <Notification>

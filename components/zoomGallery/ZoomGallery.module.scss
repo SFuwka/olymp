@@ -7,7 +7,7 @@
         max-width: 100%;
         max-height: 100%;
         display: block;
-        height: auto
+        height: auto;
     }
 }
 
@@ -16,7 +16,7 @@
     position: absolute;
     right: 8px;
     top: 8px;
-    z-index: 2;
+    z-index: 3;
     cursor: pointer;
 }
 .nav {
@@ -28,11 +28,8 @@
     align-items: center;
     opacity: 0.1;
     z-index: 1;
-    transition: all 0.2s ease-in;
+    transition: all 0.3s ease-in;
     cursor: pointer;
-    &:hover {
-        opacity: 1;
-    }
 }
 .prev {
     left: 0;
@@ -57,4 +54,42 @@
     width: 80vw;
     height: 90vh;
     background-color: rgb(75, 75, 75);
+}
+
+.prevWrapper {
+    width: 30%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    cursor: pointer;
+    &:hover {
+        .prev {
+            opacity: 1;
+            svg {
+                opacity: 1;
+                filter: invert(80%);
+                transition: filter 0.3s ease-in;
+            }
+        }
+    }
+}
+
+.nextWrapper {
+    right: 0;
+    top: 0;
+    width: 70%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    cursor: pointer;
+    &:hover {
+        .next {
+            opacity: 1;
+            svg {
+                opacity: 1;
+                filter: invert(80%);
+                transition: filter 0.3s ease-in;
+            }
+        }
+    }
 }

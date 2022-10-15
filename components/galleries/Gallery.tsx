@@ -3,17 +3,15 @@ import styles from './galleries.module.scss'
 import { useWindowSize } from '../../helpFunctions/hooks/windowSize';
 import ZoomGallery from '../zoomGallery/ZoomGallery';
 import { ModalWindow as Modal } from '../portals/ModalWindow'
-import "swiper/css/pagination";
+import 'swiper/css/pagination';
 import 'swiper/css';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, {
-  Pagination
-} from 'swiper';
-import { Lazy } from "swiper";
+import { Pagination, Lazy } from 'swiper';
+
 
 type SlideType = {
-  url: string
-  alt: string
+  src: string
+  alt?: string
   description?: string
 }
 
@@ -21,13 +19,16 @@ type SlideType = {
 interface IGallery {
   slides: SlideType[]
   highResSlides: SlideType[]
+  showBullets?: 2 | 3 | 4
 }
 
-export const Gallery = ({ slides, highResSlides }: IGallery) => {
+export const Gallery = ({ slides, highResSlides, showBullets = 4 }: IGallery) => {
   const windowWidth = useWindowSize()[0]
   const [currentSlide, setCurrentSlide] = useState<number | null>(null)
   const [modalOpened, setModalOpened] = useState(false)
   const [slidesPerView, setSlidesPerView] = useState(1)
+  const [currentBullet, setCur] = useState<number>(1)
+  let bulletClassName = (increment: number) => Math.abs((currentBullet + increment) % showBullets) === 1 ? styles.activeBullet : styles.bullet
 
   const openModal = (slideIndex: number) => {
     if (slidesPerView === 1) return setModalOpened(false)
@@ -42,6 +43,7 @@ export const Gallery = ({ slides, highResSlides }: IGallery) => {
   useEffect(() => {
     if (windowWidth >= 770) setSlidesPerView(3)
     if (windowWidth < 770) setSlidesPerView(2)
+    if (slides.length <= 3) setSlidesPerView(2)
     if (windowWidth < 500) setSlidesPerView(1)
   }, [windowWidth])
   return (
@@ -49,9 +51,15 @@ export const Gallery = ({ slides, highResSlides }: IGallery) => {
       <div className={styles.sliderContainer}>
         <Swiper
           modules={[Lazy, Pagination]}
+          lazy={true}
           grabCursor={true}
           loop={true}
-          pagination={{ clickable: true, el: styles.test }}
+          onSlideChangeTransitionEnd={(swiper) => {
+            if (swiper.previousIndex > swiper.activeIndex) {
+              return setCur(prev => prev -= 1)
+            }
+            return (setCur(prev => prev += 1))
+          }}
           slidesPerView={slidesPerView}
           spaceBetween={20}>
           {slides.map((slide, i) => {
@@ -59,19 +67,28 @@ export const Gallery = ({ slides, highResSlides }: IGallery) => {
               <SwiperSlide key={i}>
                 <div onClick={() => openModal(i)} >
                   <img className={styles.slide}
-                    style={{ width: '100%' }}
-                    alt={slide.alt} src={slide.url}></img>
+                    
+                    alt={slide.alt} src={slide.src}></img>
                   {slide.description && <p>{slide.description}</p>}
                 </div>
               </SwiperSlide>
             )
           })}
         </Swiper>
+        <div className={styles.pagination}>
+          <span className={bulletClassName(2)}></span>
+          <span className={bulletClassName(1)}></span>
+          {showBullets > 2 && <span className={bulletClassName(0)}></span>}
+          {showBullets > 3 && < span className={bulletClassName(-1)}></span>}
+        </div>
       </div>
-      {slidesPerView > 1 ? <Modal open={modalOpened} handleClose={closeModal}>
-        <ZoomGallery initialSlideIndex={currentSlide} slides={highResSlides}
-          inModal={true} closeModal={closeModal} />
-      </Modal> : ''}
-    </div>
+
+      {
+        slidesPerView > 1 ? <Modal open={modalOpened} handleClose={closeModal}>
+          <ZoomGallery initialSlideIndex={currentSlide} slides={highResSlides}
+            inModal={true} closeModal={closeModal} />
+        </Modal> : ''
+      }
+    </div >
   )
 }

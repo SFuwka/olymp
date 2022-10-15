@@ -2,7 +2,52 @@
 @import "../../styles/variables.scss";
 @import "../../styles/mixins.scss";
 
+.pagination {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    span {
+        border-radius: 100%;
+        width: 8px;
+        height: 8px;
+    }
+}
 
-.test{
-    
+.bullet {
+    margin-left: 6px;
+    margin-right: 6px;
+    background-color: $aquaBlue;
+    opacity: 0.3;
+}
+
+.activeBullet {
+    margin-left: 6px;
+    margin-right: 6px;
+    width: 10px;
+    height: 10px;
+    background-color: $pink;
+    opacity: 1;
+    transform: scale(1.5);
+    box-shadow: 0 0 7px 4px rgba(203, 93, 149, 0.4);
+    transition: box-shadow 0.5s, transform 0.5s;
+}
+
+.gymsRoot {
+    h3 {
+        text-align: center;
+    }
+}
+
+.gridGalleryRoot {
+    margin-bottom: 40px;
+}
+
+.slide {
+    width: 100%;
+}
+
+.sliderContainer{
+   
 }

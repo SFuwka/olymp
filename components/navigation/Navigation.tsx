@@ -23,7 +23,6 @@ export const Navigation = () => {
     const handleBurgerClick = () => {
         setMenuOpen(prev => !prev)
     }
-
     useEffect(() => {
         if (windowWidth > 500 && menuOpen) setMenuOpen(false)
     }, [windowWidth, menuOpen])

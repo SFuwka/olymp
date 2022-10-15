@@ -12,8 +12,8 @@ const coaches = [
   {
     name: 'Евгения Игоревна',
     fullName: 'Евгения Игоревна Кузенкова',
-    src: '/images/coaches/evgenia_small.jpg',
-    srcBIg: 'images/coaches/evgenia.jpg',
+    src: '/images/coaches/evgenia_small.webp',
+    srcBIg: 'images/coaches/evgenia.webp',
     position: 'Старший тренер',
     positionDirection: `Старший тренер отделения по художественной гимнастике,
       Тренер групп начальной подготовки.
@@ -30,8 +30,8 @@ const coaches = [
   {
     name: 'Виктория Игоревна',
     fullName: 'Виктория Игоревна Леляк',
-    src: '/images/coaches/viktoria_small.jpg',
-    srcBIg: 'images/coaches/viktoria.jpg?webp',
+    src: '/images/coaches/viktoria_small.webp',
+    srcBIg: 'images/coaches/viktoria.webp',
     position: 'Тренер',
     positionDirection: `Тренер групп спортивного совершенствования,
       Тренер групп начальной подготовки.`,
@@ -44,8 +44,8 @@ const coaches = [
   {
     name: 'Екатерина Сергеевна',
     fullName: 'Екатерина Сергеевна Иванченкова',
-    src: '/images/coaches/ekaterina_small.jpg',
-    srcBIg: 'images/coaches/ekaterina.jpg',
+    src: '/images/coaches/ekaterina_small.webp',
+    srcBIg: 'images/coaches/ekaterina.webp',
     position: 'Тренер',
     id: 'ekaterina',
     positionDirection: `Тренер групп начальной подготовки.`,
@@ -56,8 +56,8 @@ const coaches = [
   {
     name: 'Карина Владимировна',
     fullName: 'Карина Владимировна Бигеева',
-    src: '/images/coaches/karina_small.jpg',
-    srcBIg: 'images/coaches/karina.jpg',
+    src: '/images/coaches/karina_small.webp',
+    srcBIg: 'images/coaches/karina.webp',
     position: 'Тренер',
     positionDirection: `Тренер групп начальной подготовки.`,
     id: 'karina',

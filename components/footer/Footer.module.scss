@@ -14,12 +14,12 @@
         align-items: center;
         margin-top: space(1);
         margin-left: space(1);
-        @media screen and(max-width: 500px) {
+        @media screen and (max-width: 500px) {
             flex-wrap: wrap;
         }
         p {
             margin-left: space(2);
-            @media screen and(max-width: 500px) {
+            @media screen and (max-width: 500px) {
                 margin: 0;
                 padding: space(1);
             }
