@@ -41,7 +41,7 @@ export const CoachCard = ({ fullName, position, positionDirection, info, src }: 
         </div>
         <div className={styles.picture}>
           <img style={imgLoaded ? {} : { display: 'none' }} onLoad={() => setImageLoaded(true)} src={src} alt="" />
-          {!imgLoaded && <Loader width={650} minHeight={350} borderRadius={20} />}
+          {!imgLoaded && <Loader width={650} minHeight={300} borderRadius={20} />}
         </div>
       </div>
     </>

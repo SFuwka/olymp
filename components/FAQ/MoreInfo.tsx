@@ -22,8 +22,8 @@ export const MoreInfo = () => {
             <div className={styles.info}>
                 <strong>Позвоните нам по телефонам:</strong>
                 <div className={styles.phones}>
-                    <Link href='tel:+7 951 666 7113'><button>+7 951 666 7113</button></Link>
-                    <Link href='tel:+7 981 731 8152'><button>+7 981 731 8152</button></Link>
+                    <Link href='tel:+7 951 666 7113'>+7 951 666 7113</Link>
+                    <Link href='tel:+7 981 731 8152'>+7 981 731 8152</Link>
                 </div>
                 {!context.state.TrialRequestSended && <>
                     <p>или оставьте свой номер телефона и мы вам перезвоним</p>

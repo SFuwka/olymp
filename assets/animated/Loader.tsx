@@ -17,6 +17,7 @@ export const Loader = ({ width, minHeight, borderRadius }: LoaderProps) => {
     }, []);
     return (
         <>
+            {!show && <div style={{ width: '100%', minHeight: 300 }}></div>}
             {show && <div className={styles.loader} style={{ width, minHeight, borderRadius }}>
                 <div className={styles.ldsRipple}><div></div><div></div></div>
             </div>}
