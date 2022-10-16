@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { useState } from 'react'
 import { useAppContext } from '../../context/AppContext'
 import { ModalWindow } from '../portals/ModalWindow'
@@ -21,8 +22,8 @@ export const MoreInfo = () => {
             <div className={styles.info}>
                 <strong>Позвоните нам по телефонам:</strong>
                 <div className={styles.phones}>
-                    <a href='tel:+7 951 666 7113'><button>+7 951 666 7113</button></a>
-                    <a href='tel:+7 981 731 8152'><button>+7 981 731 8152</button></a>
+                    <Link href='tel:+7 951 666 7113'><button>+7 951 666 7113</button></Link>
+                    <Link href='tel:+7 981 731 8152'><button>+7 981 731 8152</button></Link>
                 </div>
                 {!context.state.TrialRequestSended && <>
                     <p>или оставьте свой номер телефона и мы вам перезвоним</p>

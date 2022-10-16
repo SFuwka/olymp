@@ -106,7 +106,7 @@ export const TelegramForm = ({ inModal, closeModal, withQuestion }: TelegramForm
                 </TelegramButton>
             </form>
             <div> <p className={clsx(styles.policy, inModal ? styles.policyInModal : '')}>Отправляя данную форму вы соглашаетесь с
-                <Link href='/policy'><a target='_blank'> политикой конфиденциальности</a></Link></p></div>
+                политикой конфиденциальности</p></div>
         </div>
     )
 }

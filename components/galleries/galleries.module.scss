@@ -2,6 +2,10 @@
 @import "../../styles/variables.scss";
 @import "../../styles/mixins.scss";
 
+.root{
+    -webkit-tap-highlight-color: transparent !important;
+}
+
 .pagination {
     width: 100%;
     display: flex;
@@ -41,6 +45,7 @@
 }
 
 .gridGalleryRoot {
+    -webkit-tap-highlight-color: transparent !important;
     margin-bottom: 40px;
 }
 
@@ -49,5 +54,5 @@
 }
 
 .sliderContainer{
-   
+    -webkit-tap-highlight-color: transparent !important;
 }

@@ -30,7 +30,7 @@ export const ActionTop = () => {
                     <Link href="https://yandex.ru/maps/10884/pushkin/?from=mapframe&ll=30.382232%2C59.702416&mode=usermaps&source=mapframe&um=constructor%3A7eb3410eadc2ed59f61dedd9861ba0fa59851643a326e3f957f88df1999e7bf8&utm_source=mapframe&z=18'">
                         <a target='_blank'><p>ТРК Константиновский, ул. Полковая 1/25</p></a></Link>
                     <Link href="https://yandex.ru/maps/10884/pushkin/?from=mapframe&ll=30.415129%2C59.730934&source=mapframe&um=constructor%3A7eb3410eadc2ed59f61dedd9861ba0fa59851643a326e3f957f88df1999e7bf8&utm_source=mapframe&z=16.53">
-                        <a target='_blank'><p>Бульвар Алексея Толстого д.50 к.1.</p></a></Link>
+                        <a target='_blank'><p>Бульвар Алексея Толстого 50/1</p></a></Link>
                 </div>
                 {!context.state.TrialRequestSended && <div>
                     <div className={styles.actionCall}> <strong>Запишитесь на первое занятие совершенно <br />
