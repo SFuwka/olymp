@@ -31,9 +31,9 @@ export const Navigation = () => {
         <nav className={styles.nav}>
             <div className={styles.navContainer}>
                 {windowWidth > 730 && <div className={styles.logo}><Logo color='#fff' /></div>}
-                {windowWidth <= 500 && <BurgerButton onClick={handleBurgerClick} />}
+                {windowWidth <= 560 && <BurgerButton onClick={handleBurgerClick} />}
                 <div className={styles.navLinks}>
-                    {windowWidth > 500 && <div>
+                    {windowWidth > 560 && <div>
                         {linksJsx.map((link) => {
                             return link
                         })}

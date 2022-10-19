@@ -5,7 +5,7 @@ import { GroupsAndPricesCard } from './GroupsAndPricesCard'
 const cards = [
     {
         key: 'group1',
-        children: <Image width={600} quality={90} height={400} alt='гимнастки начальной подготовки' src='/images/group1.jpg' />,
+        children: <img alt='гимнастки начальной подготовки' src='/images/group1.webp' />,
         groupName: 'Группы художественной гимнастики, начальная подготовка от 3 до 6 лет',
         haveButton: true,
         content: [
@@ -18,7 +18,7 @@ const cards = [
     },
     {
         key: 'group2',
-        children: <Image width={600} quality={90} height={400} alt='гимнастки среднего уровня подготовки' src='/images/group2.jpg' />,
+        children: <img alt='гимнастки среднего уровня подготовки' src='/images/group2.webp' />,
         groupName: 'Группы художественной гимнастики от 6 лет',
         haveButton: true,
         content: [
@@ -36,7 +36,7 @@ const cards = [
     },
     {
         key: 'group3',
-        children: <Image width={600} quality={90} height={400} alt='гимнастки продвинутого уровня' src='/images/group3.jpg' />,
+        children: <img alt='гимнастки продвинутого уровня' src='/images/group3.webp' />,
         groupName: 'Сборная учебно-тренировочная группа  художественной гимнастики',
         content: [
             {
