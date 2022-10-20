@@ -24,7 +24,7 @@ const Checkbox = ({ id, onChange, error, className }: CheckboxProps) => {
     return <div className={styles.checkBoxContainer}>
         <input onChange={onChange} type="checkbox" id={id} />
         <label className={clsx(styles.policy, className)} htmlFor={id}>
-            Я даю своё согласие на обработку моей персональной информации</label>
+            Я даю своё согласие на обработку моих персональных данных</label>
         {error && <span style={{ display: 'block' }} className={styles.error}>{error}</span>}
     </div>
 }
@@ -129,7 +129,7 @@ export const TelegramForm = ({ inModal, closeModal, withQuestion }: TelegramForm
                 </div>}
                 {inModal && <Checkbox id='checkBox1' onChange={e => handleCheck(e)} error={errors.checkError} />}
                 <TelegramButton
-                    disabled={inProgress || errors?.nameError !== null || errors.phoneError !== null}
+                    disabled={inProgress || errors?.nameError !== null || errors.phoneError !== null || errors.checkError !==null}
                     onClick={handleClick}>
                     {withQuestion ? 'отправить' : 'записаться'}
                 </TelegramButton>
