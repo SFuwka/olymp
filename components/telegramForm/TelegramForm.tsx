@@ -13,17 +13,35 @@ interface TelegramFormProps {
     withQuestion?: boolean
 }
 
+interface CheckboxProps {
+    id: string
+    onChange: React.ChangeEventHandler<HTMLInputElement>
+    error?: string | null
+    className?: string
+}
+
+const Checkbox = ({ id, onChange, error, className }: CheckboxProps) => {
+    return <div className={styles.checkBoxContainer}>
+        <input onChange={onChange} type="checkbox" id={id} />
+        <label className={clsx(styles.policy, className)} htmlFor={id}>
+            Я даю своё согласие на обработку моей персональной информации</label>
+        {error && <span style={{ display: 'block' }} className={styles.error}>{error}</span>}
+    </div>
+}
+
 export const TelegramForm = ({ inModal, closeModal, withQuestion }: TelegramFormProps) => {
     const context = useAppContext()
     const [formData, setFormData] = useState({ name: '', phone: '', question: '' })
     const [inProgress, setinProgress] = useState(false)
+    const [checked, setChecked] = useState(false)
 
     const [errors, setErrors] =
-        useState<{ nameError?: string | null, phoneError?: string | null }>({ nameError: null, phoneError: null })
+        useState<{ nameError?: string | null, phoneError?: string | null, checkError?: string | null }>
+            ({ nameError: null, phoneError: null, checkError: null })
 
     const handleClick = (e: React.MouseEvent<HTMLElement>) => {
         e.preventDefault()
-        if (!formData.name || !formData.phone || formData.phone.match(/\d/g)?.length !== 11) {
+        if (!formData.name || !formData.phone || formData.phone.match(/\d/g)?.length !== 11 || !checked) {
             if (!formData.name) {
                 setErrors(prev => {
                     return { ...prev, nameError: 'поле обязательно' }
@@ -38,6 +56,11 @@ export const TelegramForm = ({ inModal, closeModal, withQuestion }: TelegramForm
             if (formData.phone.match(/\d/g)?.length !== 11) {
                 return setErrors(prev => {
                     return { ...prev, phoneError: 'некорректный телефон' }
+                })
+            }
+            if (!checked) {
+                return setErrors(prev => {
+                    return { ...prev, checkError: 'согласитесь на обработку персональных данных' }
                 })
             }
             return
@@ -59,6 +82,10 @@ export const TelegramForm = ({ inModal, closeModal, withQuestion }: TelegramForm
 
     }
 
+    const handleCheck = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setErrors(prev => ({ ...prev, checkError: null }))
+        setChecked(e.target.checked)
+    }
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setFormData(prev => {
@@ -75,6 +102,7 @@ export const TelegramForm = ({ inModal, closeModal, withQuestion }: TelegramForm
             return { ...prev, [e.target.name]: e.target.value }
         })
     }
+
 
     return (
         <div className={inModal === true ? styles.rootInModal : styles.root}>
@@ -99,14 +127,14 @@ export const TelegramForm = ({ inModal, closeModal, withQuestion }: TelegramForm
                     <textarea rows={4} onChange={handleChange} name='question' value={formData.question} id='question' />
                     <label className={formData.question && styles.labelFixed} htmlFor="question">Вопрос</label>
                 </div>}
+                {inModal && <Checkbox id='checkBox1' onChange={e => handleCheck(e)} error={errors.checkError} />}
                 <TelegramButton
                     disabled={inProgress || errors?.nameError !== null || errors.phoneError !== null}
                     onClick={handleClick}>
                     {withQuestion ? 'отправить' : 'записаться'}
                 </TelegramButton>
             </form>
-            <div> <p className={clsx(styles.policy, inModal ? styles.policyInModal : '')}>Отправляя данную форму вы соглашаетесь с
-                политикой конфиденциальности</p></div>
+            {!inModal && < Checkbox id='checkBox2' className={styles.checkbox} error={errors.checkError} onChange={(e) => handleCheck(e)} />}
         </div>
     )
 }
