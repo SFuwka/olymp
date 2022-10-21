@@ -14,6 +14,8 @@ const coaches = [
     fullName: 'Евгения Игоревна Кузенкова',
     src: '/images/coaches/evgenia_small.webp',
     srcBIg: 'images/coaches/evgenia.webp',
+    width: 650,
+    height: 434,
     position: 'Старший тренер',
     positionDirection: `Старший тренер отделения по художественной гимнастике,
       Тренер групп начальной подготовки.
@@ -32,6 +34,8 @@ const coaches = [
     fullName: 'Виктория Игоревна Леляк',
     src: '/images/coaches/viktoria_small.webp',
     srcBIg: 'images/coaches/viktoria.webp',
+    width: 900,
+    height: 601,
     position: 'Тренер',
     positionDirection: `Тренер групп спортивного совершенствования,
       Тренер групп начальной подготовки.`,
@@ -46,6 +50,8 @@ const coaches = [
     fullName: 'Екатерина Сергеевна Иванченкова',
     src: '/images/coaches/ekaterina_small.webp',
     srcBIg: 'images/coaches/ekaterina.webp',
+    width: 898,
+    height: 600,
     position: 'Тренер',
     id: 'ekaterina',
     positionDirection: `Тренер групп начальной подготовки.`,
@@ -58,6 +64,8 @@ const coaches = [
     fullName: 'Карина Владимировна Бигеева',
     src: '/images/coaches/karina_small.webp',
     srcBIg: 'images/coaches/karina.webp',
+    width: 900,
+    height: 601,
     position: 'Тренер',
     positionDirection: `Тренер групп начальной подготовки.`,
     id: 'karina',
@@ -119,6 +127,8 @@ export const Coaches = () => {
             positionDirection={activeCoach.positionDirection}
             info={activeCoach.info}
             src={activeCoach.srcBIg}
+            width={activeCoach.width}
+            height={activeCoach.height}
           ></CoachCard>
         </div>}
       </article>

@@ -23,7 +23,7 @@ const Home: NextPage = () => {
 
   return (
     <React.StrictMode>
-      <MainLayout title='Olymp | Home' description='Rhythmic gymnastics in Pusnik'>
+      <MainLayout title='Olymp | Home' description='Художественная гимнастика для детей в городе Пушкин'>
         <Header />
         <Divider />
         {windowWidth <= 750 && <ActionTop />}
