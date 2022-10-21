@@ -12,6 +12,8 @@ import { Pagination, Lazy } from 'swiper';
 type SlideType = {
   src: string
   alt?: string
+  width?: number
+  height?: number
   description?: string
 }
 
@@ -66,9 +68,9 @@ export const Gallery = ({ slides, highResSlides, showBullets = 4 }: IGallery) =>
             return (
               <SwiperSlide key={i}>
                 <div onClick={() => openModal(i)} >
-                  <img className={styles.slide}
-                    
-                    alt={slide.alt} src={slide.src}></img>
+                  <img loading='lazy' style={{ width: '100%', height: 'auto' }} className={styles.slide}
+
+                    alt={slide.alt} src={slide.src} width={slide.width} height={slide.height}></img>
                   {slide.description && <p>{slide.description}</p>}
                 </div>
               </SwiperSlide>

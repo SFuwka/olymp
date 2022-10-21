@@ -1,11 +1,15 @@
 import React, { useState } from 'react'
-import { Gallery } from 'react-grid-gallery'
+import { Gallery, ThumbnailImageProps } from 'react-grid-gallery'
 import { galleryImages, galleryImagesHighRes } from './paths'
 import styles from './galleries.module.scss'
 import { ModalWindow } from '../portals/ModalWindow'
 import ZoomGallery from '../zoomGallery/ZoomGallery'
 import { useWindowSize } from '../../helpFunctions/hooks/windowSize'
 
+const LazyLoadImg = (props: ThumbnailImageProps) => {
+    const { imageProps } = props
+    return <img src={imageProps.src} alt={imageProps.alt} loading='lazy' style={imageProps.style} />
+}
 
 
 
@@ -25,7 +29,7 @@ export const GridGallery = () => {
     return (
         <section id='gallery' className={styles.gridGalleryRoot}>
             <h2>Галерея</h2>
-            <Gallery enableImageSelection={false} images={galleryImages} onClick={(index) => {
+            <Gallery thumbnailImageComponent={LazyLoadImg} enableImageSelection={false} images={galleryImages} onClick={(index) => {
                 openModal(index)
             }} />
             <ModalWindow open={modalOpened} handleClose={closeModal}>

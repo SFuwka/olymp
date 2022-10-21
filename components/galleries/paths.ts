@@ -1,57 +1,436 @@
-export const bootCampImages = [ //before database setup
-    { src: '/images/bootcamp/small/1.webp', alt: '' },
-    { src: '/images/bootcamp/small/2.webp', alt: '' },
-    { src: '/images/bootcamp/small/3.webp', alt: '' },
-    { src: '/images/bootcamp/small/4.webp', alt: '' },
-    { src: '/images/bootcamp/small/5.webp', alt: '' },
-    { src: '/images/bootcamp/small/6.webp', alt: '' },
-    { src: '/images/bootcamp/small/7.webp', alt: '' },
-    { src: '/images/bootcamp/small/8.webp', alt: '' },
-    { src: '/images/bootcamp/small/9.webp', alt: '' },
-]
+export const bootCampImages = [
+    {
+      src: 'images/bootcamp/small/1.webp',
+      width: 500,
+      height: 374,
+      alt: ''
+    },
+    {
+      src: 'images/bootcamp/small/2.webp',
+      width: 500,
+      height: 374,
+      alt: ''
+    },
+    {
+      src: 'images/bootcamp/small/3.webp',
+      width: 500,
+      height: 374,
+      alt: ''
+    },
+    {
+      src: 'images/bootcamp/small/4.webp',
+      width: 500,
+      height: 374,
+      alt: ''
+    },
+    {
+      src: 'images/bootcamp/small/5.webp',
+      width: 500,
+      height: 374,
+      alt: ''
+    },
+    {
+      src: 'images/bootcamp/small/6.webp',
+      width: 500,
+      height: 374,
+      alt: ''
+    },
+    {
+      src: 'images/bootcamp/small/7.webp',
+      width: 500,
+      height: 374,
+      alt: ''
+    },
+    {
+      src: 'images/bootcamp/small/8.webp',
+      width: 500,
+      height: 374,
+      alt: ''
+    },
+    {
+      src: 'images/bootcamp/small/9.webp',
+      width: 500,
+      height: 374,
+      alt: ''
+    },
+    {
+      src: 'images/bootcamp/small/photo_2022-10-21_03-38-40.webp',
+      width: 500,
+      height: 375,
+      alt: ''
+    },
+    {
+      src: 'images/bootcamp/small/photo_2022-10-21_03-39-11.webp',
+      width: 500,
+      height: 375,
+      alt: ''
+    },
+    {
+      src: 'images/bootcamp/small/photo_2022-10-21_03-39-15.webp',
+      width: 500,
+      height: 375,
+      alt: ''
+    },
+    {
+      src: 'images/bootcamp/small/photo_2022-10-21_03-39-19.webp',
+      width: 500,
+      height: 375,
+      alt: ''
+    },
+    {
+      src: 'images/bootcamp/small/photo_2022-10-21_03-39-25.webp',
+      width: 500,
+      height: 375,
+      alt: ''
+    },
+    {
+      src: 'images/bootcamp/small/photo_2022-10-21_03-39-27.webp',
+      width: 500,
+      height: 375,
+      alt: ''
+    },
+    {
+      src: 'images/bootcamp/small/photo_2022-10-21_03-39-31.webp',
+      width: 500,
+      height: 375,
+      alt: ''
+    },
+    {
+      src: 'images/bootcamp/small/photo_2022-10-21_03-39-34.webp',
+      width: 500,
+      height: 375,
+      alt: ''
+    },
+    {
+      src: 'images/bootcamp/small/photo_2022-10-21_03-39-37.webp',
+      width: 500,
+      height: 375,
+      alt: ''
+    },
+    {
+      src: 'images/bootcamp/small/photo_2022-10-21_03-39-44.webp',
+      width: 500,
+      height: 375,
+      alt: ''
+    },
+    {
+      src: 'images/bootcamp/small/photo_2022-10-21_03-39-51.webp',
+      width: 500,
+      height: 375,
+      alt: ''
+    }
+  ]
 
-export const bootCampImagesHighRes = [ //before database setup
-    { src: '/images/bootcamp/1.webp', alt: '' },
-    { src: '/images/bootcamp/2.webp', alt: '' },
-    { src: '/images/bootcamp/3.webp', alt: '' },
-    { src: '/images/bootcamp/4.webp', alt: '' },
-    { src: '/images/bootcamp/5.webp', alt: '' },
-    { src: '/images/bootcamp/6.webp', alt: '' },
-    { src: '/images/bootcamp/7.webp', alt: '' },
-    { src: '/images/bootcamp/8.webp', alt: '' },
-    { src: '/images/bootcamp/9.webp', alt: '' },
-]
+export const bootCampImagesHighRes = [
+    { src: 'images/bootcamp/1.webp', width: 1280, height: 960, alt: '' },
+    { src: 'images/bootcamp/2.webp', width: 1280, height: 958, alt: '' },
+    { src: 'images/bootcamp/3.webp', width: 1280, height: 960, alt: '' },
+    { src: 'images/bootcamp/4.webp', width: 1280, height: 960, alt: '' },
+    { src: 'images/bootcamp/5.webp', width: 1280, height: 960, alt: '' },
+    { src: 'images/bootcamp/6.webp', width: 960, height: 1280, alt: '' },
+    { src: 'images/bootcamp/7.webp', width: 1280, height: 960, alt: '' },
+    { src: 'images/bootcamp/8.webp', width: 1280, height: 960, alt: '' },
+    { src: 'images/bootcamp/9.webp', width: 960, height: 1280, alt: '' },
+    {
+      src: 'images/bootcamp/photo_2022-10-21_03-38-40.webp',
+      width: 960,
+      height: 1280,
+      alt: ''
+    },
+    {
+      src: 'images/bootcamp/photo_2022-10-21_03-39-11.webp',
+      width: 1280,
+      height: 960,
+      alt: ''
+    },
+    {
+      src: 'images/bootcamp/photo_2022-10-21_03-39-15.webp',
+      width: 1280,
+      height: 960,
+      alt: ''
+    },
+    {
+      src: 'images/bootcamp/photo_2022-10-21_03-39-19.webp',
+      width: 1280,
+      height: 960,
+      alt: ''
+    },
+    {
+      src: 'images/bootcamp/photo_2022-10-21_03-39-25.webp',
+      width: 960,
+      height: 1280,
+      alt: ''
+    },
+    {
+      src: 'images/bootcamp/photo_2022-10-21_03-39-27.webp',
+      width: 1280,
+      height: 960,
+      alt: ''
+    },
+    {
+      src: 'images/bootcamp/photo_2022-10-21_03-39-31.webp',
+      width: 960,
+      height: 1280,
+      alt: ''
+    },
+    {
+      src: 'images/bootcamp/photo_2022-10-21_03-39-34.webp',
+      width: 1280,
+      height: 960,
+      alt: ''
+    },
+    {
+      src: 'images/bootcamp/photo_2022-10-21_03-39-37.webp',
+      width: 1280,
+      height: 960,
+      alt: ''
+    },
+    {
+      src: 'images/bootcamp/photo_2022-10-21_03-39-44.webp',
+      width: 1024,
+      height: 768,
+      alt: ''
+    },
+    {
+      src: 'images/bootcamp/photo_2022-10-21_03-39-51.webp',
+      width: 960,
+      height: 1280,
+      alt: ''
+    }
+  ]
 
 export const competitionsImages = [
-    { src: '/images/competitions/small/1.webp', alt: '' },
-    { src: '/images/competitions/small/2.webp', alt: '' },
-    { src: '/images/competitions/small/3.webp', alt: '' },
-    { src: '/images/competitions/small/4.webp', alt: '' },
-    { src: '/images/competitions/small/5.webp', alt: '' },
-    { src: '/images/competitions/small/6.webp', alt: '' },
-    { src: '/images/competitions/small/7.webp', alt: '' },
-    { src: '/images/competitions/small/8.webp', alt: '' },
-    { src: '/images/competitions/small/9.webp', alt: '' },
-    { src: '/images/competitions/small/10.webp', alt: '' },
-    { src: '/images/competitions/small/11.webp', alt: '' },
-    { src: '/images/competitions/small/12.webp', alt: '' },
-    { src: '/images/competitions/small/13.webp', alt: '' },
-]
+    {
+      src: 'images/competitions/small/1.webp',
+      width: 500,
+      height: 334,
+      alt: ''
+    },
+    {
+      src: 'images/competitions/small/10.webp',
+      width: 500,
+      height: 334,
+      alt: ''
+    },
+    {
+      src: 'images/competitions/small/11.webp',
+      width: 500,
+      height: 334,
+      alt: ''
+    },
+    {
+      src: 'images/competitions/small/12.webp',
+      width: 500,
+      height: 334,
+      alt: ''
+    },
+    {
+      src: 'images/competitions/small/13.webp',
+      width: 500,
+      height: 334,
+      alt: ''
+    },
+    {
+      src: 'images/competitions/small/2.webp',
+      width: 500,
+      height: 334,
+      alt: ''
+    },
+    {
+      src: 'images/competitions/small/3.webp',
+      width: 500,
+      height: 334,
+      alt: ''
+    },
+    {
+      src: 'images/competitions/small/4.webp',
+      width: 500,
+      height: 334,
+      alt: ''
+    },
+    {
+      src: 'images/competitions/small/5.webp',
+      width: 500,
+      height: 334,
+      alt: ''
+    },
+    {
+      src: 'images/competitions/small/6.webp',
+      width: 500,
+      height: 334,
+      alt: ''
+    },
+    {
+      src: 'images/competitions/small/7.webp',
+      width: 500,
+      height: 334,
+      alt: ''
+    },
+    {
+      src: 'images/competitions/small/8.webp',
+      width: 500,
+      height: 334,
+      alt: ''
+    },
+    {
+      src: 'images/competitions/small/9.webp',
+      width: 500,
+      height: 334,
+      alt: ''
+    },
+    {
+      src: 'images/competitions/small/photo_2022-10-21_03-39-58.webp',
+      width: 500,
+      height: 334,
+      alt: ''
+    },
+    {
+      src: 'images/competitions/small/photo_2022-10-21_03-40-05.webp',
+      width: 500,
+      height: 334,
+      alt: ''
+    },
+    {
+      src: 'images/competitions/small/photo_2022-10-21_03-40-08.webp',
+      width: 500,
+      height: 334,
+      alt: ''
+    },
+    {
+      src: 'images/competitions/small/photo_2022-10-21_03-40-11.webp',
+      width: 500,
+      height: 333,
+      alt: ''
+    },
+    {
+      src: 'images/competitions/small/photo_2022-10-21_03-40-14.webp',
+      width: 500,
+      height: 334,
+      alt: ''
+    },
+    {
+      src: 'images/competitions/small/photo_2022-10-21_03-40-17.webp',
+      width: 500,
+      height: 334,
+      alt: ''
+    }
+  ]
 export const competitionsImagesHighRes = [
-    { src: '/images/competitions/1.webp', alt: '' },
-    { src: '/images/competitions/2.webp', alt: '' },
-    { src: '/images/competitions/3.webp', alt: '' },
-    { src: '/images/competitions/4.webp', alt: '' },
-    { src: '/images/competitions/5.webp', alt: '' },
-    { src: '/images/competitions/6.webp', alt: '' },
-    { src: '/images/competitions/7.webp', alt: '' },
-    { src: '/images/competitions/8.webp', alt: '' },
-    { src: '/images/competitions/9.webp', alt: '' },
-    { src: '/images/competitions/10.webp', alt: '' },
-    { src: '/images/competitions/11.webp', alt: '' },
-    { src: '/images/competitions/12.webp', alt: '' },
-    { src: '/images/competitions/13.webp', alt: '' },
-]
+    {
+      src: 'images/competitions/1.webp',
+      width: 1000,
+      height: 667,
+      alt: ''
+    },
+    {
+      src: 'images/competitions/10.webp',
+      width: 1000,
+      height: 667,
+      alt: ''
+    },
+    {
+      src: 'images/competitions/11.webp',
+      width: 1000,
+      height: 667,
+      alt: ''
+    },
+    {
+      src: 'images/competitions/12.webp',
+      width: 1000,
+      height: 667,
+      alt: ''
+    },
+    {
+      src: 'images/competitions/13.webp',
+      width: 1000,
+      height: 667,
+      alt: ''
+    },
+    {
+      src: 'images/competitions/2.webp',
+      width: 1000,
+      height: 667,
+      alt: ''
+    },
+    {
+      src: 'images/competitions/3.webp',
+      width: 1000,
+      height: 667,
+      alt: ''
+    },
+    {
+      src: 'images/competitions/4.webp',
+      width: 1000,
+      height: 667,
+      alt: ''
+    },
+    {
+      src: 'images/competitions/5.webp',
+      width: 1000,
+      height: 667,
+      alt: ''
+    },
+    {
+      src: 'images/competitions/6.webp',
+      width: 1000,
+      height: 667,
+      alt: ''
+    },
+    {
+      src: 'images/competitions/7.webp',
+      width: 1000,
+      height: 667,
+      alt: ''
+    },
+    {
+      src: 'images/competitions/8.webp',
+      width: 1000,
+      height: 667,
+      alt: ''
+    },
+    {
+      src: 'images/competitions/9.webp',
+      width: 1000,
+      height: 667,
+      alt: ''
+    },
+    {
+      src: 'images/competitions/photo_2022-10-21_03-39-58.webp',
+      width: 853,
+      height: 1280,
+      alt: ''
+    },
+    {
+      src: 'images/competitions/photo_2022-10-21_03-40-05.webp',
+      width: 853,
+      height: 1280,
+      alt: ''
+    },
+    {
+      src: 'images/competitions/photo_2022-10-21_03-40-08.webp',
+      width: 853,
+      height: 1280,
+      alt: ''
+    },
+    {
+      src: 'images/competitions/photo_2022-10-21_03-40-11.webp',
+      width: 1280,
+      height: 853,
+      alt: ''
+    },
+    {
+      src: 'images/competitions/photo_2022-10-21_03-40-14.webp',
+      width: 1024,
+      height: 768,
+      alt: ''
+    },
+    {
+      src: 'images/competitions/photo_2022-10-21_03-40-17.webp',
+      width: 1024,
+      height: 768,
+      alt: ''
+    }
+  ]
 
 export const gymsMalayaImages = [
     { src: '/images/gyms/malaya/small/1.webp', alt: '' },
