@@ -4,7 +4,6 @@ import { galleryImages, galleryImagesHighRes } from './paths'
 import styles from './galleries.module.scss'
 import { ModalWindow } from '../portals/ModalWindow'
 import ZoomGallery from '../zoomGallery/ZoomGallery'
-import { useWindowSize } from '../../helpFunctions/hooks/windowSize'
 
 const LazyLoadImg = (props: ThumbnailImageProps) => {
     const { imageProps } = props
@@ -15,7 +14,6 @@ const LazyLoadImg = (props: ThumbnailImageProps) => {
 
 export const GridGallery = () => {
     const [modalOpened, setModalOpened] = useState(false)
-    const windowWidth = useWindowSize()[0]
     const [currentSlide, setCurrentSlide] = useState<number | null>(null)
 
     const openModal = (slideIndex: number) => {

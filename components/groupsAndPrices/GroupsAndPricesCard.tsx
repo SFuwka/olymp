@@ -48,7 +48,7 @@ export const GroupsAndPricesCard = ({ children, groupName, content, haveButton }
                 className={context.state.TrialRequestSended ? styles.buttonDisabled : ''}
                 onClick={openModal}>Пробное занятие - бесплатно.</button>}
             <ModalWindow form={true} handleClose={handleClose} open={modalOpened}>
-                <div className={styles.modalContent}><TelegramForm closeModal={handleClose} inModal={true} /></div>
+                <div className={styles.modalContent}><TelegramForm metaInfo={groupName} closeModal={handleClose} inModal={true} /></div>
             </ModalWindow>
         </article>
     )

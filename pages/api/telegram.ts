@@ -14,12 +14,15 @@ export default function handler(
     res: NextApiResponse<Data>
 ) {
     if (req.method === 'POST') {
-        console.log(req.body)
+        let meta = ''
+        if (req.body.metaInfo !== undefined) {
+            meta = req.body.metaInfo
+        }
         let phone = req.body.phone.match(/\d/g).join('')
 
         phone = `+7${phone.slice(1, phone.length)}`
         bot.sendMessage(chat_id!,
-            `name: ${req.body.name}\nphone: <a href="tel:${phone}">${phone}</a>${req.body.question && `\nquestion: ${req.body.question}`}`, { parse_mode: 'HTML' })
+            `name: ${req.body.name}\nphone: <a href="tel:${phone}">${phone}</a>${req.body.question && `\nquestion: ${req.body.question}`}${meta && `\nclicked on: ${meta}`}`, { parse_mode: 'HTML' })
 
     }
 

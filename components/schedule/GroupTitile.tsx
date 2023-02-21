@@ -27,6 +27,6 @@ export const GroupTitle = ({ adress, age, coach }: IGropupCard) => {
         <p>{age}</p>
         <p>{coach}</p>
         {!context.state.TrialRequestSended && <button onClick={openModal}>записаться</button>}
-        <ModalWindow form={true} handleClose={handleClose} open={modalOpened}><TelegramForm closeModal={handleClose} inModal={true} /></ModalWindow>
+        <ModalWindow form={true} handleClose={handleClose} open={modalOpened}><TelegramForm metaInfo={`${age},${coach},${adress}`} closeModal={handleClose} inModal={true} /></ModalWindow>
     </div>
 }

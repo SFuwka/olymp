@@ -1,6 +1,5 @@
 
 import clsx from 'clsx'
-import Link from 'next/link'
 import React, { useState } from 'react'
 import { useAppContext } from '../../context/AppContext'
 import { handlePhoneTyping } from '../../helpFunctions/phoneTyping'
@@ -11,6 +10,7 @@ interface TelegramFormProps {
     inModal?: boolean
     closeModal?: (e: React.MouseEvent, force: boolean) => void
     withQuestion?: boolean
+    metaInfo?: string
 }
 
 interface CheckboxProps {
@@ -29,9 +29,9 @@ const Checkbox = ({ id, onChange, error, className }: CheckboxProps) => {
     </div>
 }
 
-export const TelegramForm = ({ inModal, closeModal, withQuestion }: TelegramFormProps) => {
+export const TelegramForm = ({ inModal, closeModal, withQuestion, metaInfo }: TelegramFormProps) => {
     const context = useAppContext()
-    const [formData, setFormData] = useState({ name: '', phone: '', question: '' })
+    const [formData, setFormData] = useState({ name: '', phone: '', question: '', metaInfo })
     const [inProgress, setinProgress] = useState(false)
     const [checked, setChecked] = useState(false)
 
@@ -129,7 +129,7 @@ export const TelegramForm = ({ inModal, closeModal, withQuestion }: TelegramForm
                 </div>}
                 {inModal && <Checkbox id='checkBox1' onChange={e => handleCheck(e)} error={errors.checkError} />}
                 <TelegramButton
-                    disabled={inProgress || errors?.nameError !== null || errors.phoneError !== null || errors.checkError !==null}
+                    disabled={inProgress || errors?.nameError !== null || errors.phoneError !== null || errors.checkError !== null}
                     onClick={handleClick}>
                     {withQuestion ? 'отправить' : 'записаться'}
                 </TelegramButton>

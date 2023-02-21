@@ -1,8 +1,6 @@
 import clsx from 'clsx'
-import { group } from 'console'
 import React, { useRef, useState } from 'react'
 import { ExpandMore } from '../../assets/svg/ExpandMore'
-import { PlusIcon } from '../../assets/svg/PlusIcon'
 import { GroupTitle } from './GroupTitile'
 import styles from './schedule.module.scss'
 import { Time } from './Time'
