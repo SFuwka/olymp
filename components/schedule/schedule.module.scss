@@ -16,7 +16,9 @@
         padding: space(2);
         text-transform: uppercase;
         cursor: pointer;
-        box-shadow: 0px 5px 5px rgb(0 0 0 / 25%),5px 0px 5px rgb(0 0 0 / 25%);
+        box-shadow:
+            0px 5px 5px rgb(0 0 0 / 25%),
+            5px 0px 5px rgb(0 0 0 / 25%);
         &:nth-child(1) {
             background-color: rgb(160, 235, 172);
         }
@@ -55,7 +57,9 @@
         z-index: 599;
         background: $cardGrey;
         transition: all 0.3s linear;
-        box-shadow: 0px 4px 4px rgb(0 0 0 / 25%), 4px 0px 4px rgb(0 0 0 / 25%);
+        box-shadow:
+            0px 4px 4px rgb(0 0 0 / 25%),
+            4px 0px 4px rgb(0 0 0 / 25%);
         &:hover {
             cursor: pointer;
             background: #ce84aa;
@@ -68,7 +72,9 @@
         button {
             min-height: 40px;
             text-transform: uppercase;
-            box-shadow: 0px 4px 4px rgb(0 0 0 / 25%), 4px 0px 4px rgb(0 0 0 / 25%);
+            box-shadow:
+                0px 4px 4px rgb(0 0 0 / 25%),
+                4px 0px 4px rgb(0 0 0 / 25%);
             background-color: #cbd9a3;
             border-radius: 10px;
             display: inline;
@@ -105,17 +111,25 @@
             background-color: #cbd9a3;
             color: #000;
         }
+        p:nth-child(6) {
+            background-color: #5441d2;
+            color: #fff;
+        }
         svg {
             margin-left: space(1);
             align-self: center;
             transition: transform 0.3s ease-in-out;
-            @media screen and (max-width:768px) {
+            @media screen and (max-width: 768px) {
                 justify-self: center;
             }
         }
     }
 
-    .squadTitile{
+    .coreography {
+        display: flex;
+        align-items: center;
+    }
+    .squadTitile {
         p:nth-child(2) {
             background-color: #ebaaa0;
             min-width: 127px;
@@ -140,10 +154,10 @@
             gap: 10px;
             transform: translateY(-350px);
             transition: all 0.3s ease-in;
-            @media screen and (max-width:768px) {
+            @media screen and (max-width: 768px) {
                 transform: translateY(-400px);
             }
-            @media screen and (max-width:460px) {
+            @media screen and (max-width: 460px) {
                 transform: translateY(-650px);
             }
             div:nth-child(1) {

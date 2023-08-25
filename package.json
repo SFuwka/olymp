@@ -29,7 +29,7 @@
   "devDependencies": {
     "@types/node": "18.0.1",
     "@types/node-telegram-bot-api": "^0.57.1",
-    "@types/react": "18.0.14",
+    "@types/react": "^18.0.14",
     "@types/react-dom": "18.0.5",
     "@types/swiper": "^6.0.0",
     "eslint": "8.19.0",

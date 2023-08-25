@@ -8,16 +8,20 @@ import { Time } from './Time'
 const npGroups = [
   {
     id: 'np1',
-    adress: 'бул.Алексея Толстого 50/1',
-    age: '3-6 лет',
+    adress: 'ул. Малая 9/3',
+    age: '4-7 лет',
     daysAndTime: [
       {
-        day: 'понедельник',
-        time: <Time time='17301815' />
+        day: 'Вторник',
+        time: <Time time='18001930' />
       },
       {
-        day: 'среда',
-        time: <Time time='17301815' />
+        day: 'Среда',
+        time: <Time time='18001930' />
+      },
+      {
+        day: 'Пятница',
+        time: <Time time='18001930' />
       }
     ],
     coach: 'Леляк В.И.',
@@ -47,11 +51,11 @@ const npGroups = [
     daysAndTime: [
       {
         day: 'вторник',
-        time: <Time time='18001845' />
+        time: <Time time='18001900' />
       },
       {
         day: 'четверг',
-        time: <Time time='18001845' />
+        time: <Time time='18001900' />
       }
     ],
     coach: 'Бигеева К.В.',
@@ -60,18 +64,52 @@ const npGroups = [
   {
     id: 'np4',
     adress: 'ул. Малая 9/3',
-    age: '7-12 лет',
+    age: '5-9 лет',
     daysAndTime: [
       {
-        day: 'вторник',
-        time: <Time time='16301800' />
+        day: 'понедельник',
+        time: <Time time='18301930' />
       },
       {
-        day: 'четверг',
-        time: <Time time='16301800' />
+        day: 'среда',
+        time: <Time time='18301930' />
       }
     ],
     coach: 'Кузенкова Е.И.',
+    isRecruiting: 'идет набор'
+  },
+  {
+    id: 'np5',
+    adress: 'ул. Малая 9/3',
+    age: '3-5 лет',
+    daysAndTime: [
+      {
+        day: 'вторник',
+        time: <Time time='18001845' />
+      },
+      {
+        day: 'Пятница',
+        time: <Time time='18001845' />
+      }
+    ],
+    coach: 'Кузенкова Е.И.',
+    isRecruiting: 'идет набор'
+  },
+  {
+    id: 'np6',
+    adress: 'Бул.Алексея Толстого 50/1',
+    age: '3-6 лет',
+    daysAndTime: [
+      {
+        day: 'вторник',
+        time: <Time time='19302015' />
+      },
+      {
+        day: 'Пятница',
+        time: <Time time='18301915' />
+      }
+    ],
+    coach: 'Иванченкова Е.С.',
     isRecruiting: 'идет набор'
   }
 ]
@@ -84,11 +122,11 @@ const utgGroups = [
     daysAndTime: [
       {
         day: 'понедельник',
-        time: <Time time='17301815' />
+        time: <Time time='19002030' />
       },
       {
         day: 'среда',
-        time: <Time time='17301815' />
+        time: <Time time='19002030' />
       }
     ],
     coach: 'Бигеева К.В.',
@@ -97,15 +135,19 @@ const utgGroups = [
   {
     id: 'utg2',
     adress: 'ул. Малая 9/3',
-    age: '6-10 лет',
+    age: '6-12 лет',
     daysAndTime: [
       {
-        day: 'вторник',
+        day: 'понедельник',
         time: <Time time='16301830' />
       },
       {
-        day: 'четверг',
+        day: 'среда',
         time: <Time time='16301830' />
+      },
+      {
+        day: 'Пятница',
+        time: <Time time='18001930' />
       }
     ],
     coach: 'Кузенкова Е.И.',
@@ -113,20 +155,16 @@ const utgGroups = [
   },
   {
     id: 'utg3',
-    adress: 'ул. Малая 9/3',
+    adress: 'Бул.Алексея Толстого 50/1',
     age: '5-8 лет',
     daysAndTime: [
       {
         day: 'вторник',
-        time: <Time time='18002000' />
+        time: <Time time='18301930' />
       },
       {
-        day: 'четверг',
-        time: <Time time='18002000' />
-      },
-      {
-        day: 'суббота',
-        time: <Time time='15001700' />
+        day: 'Пятница',
+        time: <Time time='17301830' />
       }
     ],
     coach: 'Иванченкова Е.С.',
@@ -137,70 +175,53 @@ const utgGroups = [
 const squadGroups = [
   {
     id: 'squad1',
-    age: '2012 гр. и младше',
-    coaches: ['Кузенкова Е.И.', 'Леляк В.И.'],
+    age: '2015 гр. и старше',
+    coaches: ['Леляк В.И.', 'Кузенкова Е.И.'],
+    adress: 'ул. Малая 9/3',
     info: [
       {
         day: 'понедельник',
-        time: <Time time='18302030' />,
-        adress: 'бул.Алексея Толстого 50/1'
+        time: <Time time='16301930' />,
       },
       {
         day: 'вторник',
-        time: <Time time='16302000' />,
-        adress: 'ул. Малая 9/3'
+        time: <Time time='16301800' />,
+        type: 'хореография',
+        time2: <Time time='18001930' />
       },
       {
         day: 'четверг',
-        time: <Time time='16302000' />,
-        adress: 'ул. Малая 9/3'
+        time: <Time time='16301930' />,
       },
       {
         day: 'пятница',
-        time: <Time time='18001900' />,
-        adress: 'бул.Алексея Толстого 50/1',
-        type: 'хореография',
-        coach: 'Шустова Арина Борисовна'
+        time: <Time time='16301800' />,
+        type: `хореография`,
+        time2: <Time time='18001930' />
       },
-      {
-        day: 'суббота',
-        time: <Time time='15001800' />,
-        adress: 'ул. Малая 9/3'
-      }
     ]
   },
   {
     id: 'squad2',
-    age: '2011 гр. и старше',
+    age: '2011 гр. и младше',
+    adress: 'ул. Малая 9/3',
     coaches: ['Кузенкова Е.И.', 'Леляк В.И.'],
     info: [
       {
-        day: 'вторник',
-        time: <Time time='16302000' />,
-        adress: 'ул. Малая 9/3'
+        day: 'Понедельник',
+        time: <Time time='16301830' />,
       },
       {
         day: 'среда',
-        time: <Time time='18302030' />,
-        adress: 'бул.Алексея Толстого 50/1'
-      },
-      {
-        day: 'четверг',
-        time: <Time time='16302000' />,
-        adress: 'ул. Малая 9/3'
+        time: <Time time='16301830' />,
       },
       {
         day: 'пятница',
-        time: <Time time='19002030' />,
-        adress: 'бул.Алексея Толстого 50/1',
+        time: <Time time='18001930' />,
         type: 'хореография',
-        coach: 'Шустова Арина Борисовна'
+        time2: <Time time='16301800' />
+
       },
-      {
-        day: 'суббота',
-        time: <Time time='15001800' />,
-        adress: 'ул. Малая 9/3'
-      }
     ]
   },
 ]
@@ -276,15 +297,16 @@ export const Schedule = () => {
           {squadGroups.map((group, i) => {
             return <label key={group.id} className={styles.accordion} htmlFor={group.id}>
               <input id={group.id} type="checkbox" />
-              <div className={clsx(styles.title,styles.squadTitile,
+              <div className={clsx(styles.title, styles.squadTitile,
                 i === 0 || i === squadGroups.length - 1 ? i === 0 ? styles.firstLabel : styles.lastLabel : undefined)}>
                 <div>
                   <ExpandMore />
                   <p>{group.age}</p>
+                  <p>{group.adress}</p>
                   {group.coaches.map((coach, i) => {
                     return <p key={i}>{coach}</p>
                   })}
-                  <p>индивидуальные занятия</p>
+                  <p>Индивидуальные занятия</p>
                 </div>
               </div>
               <div className={styles.content}>
@@ -294,9 +316,7 @@ export const Schedule = () => {
                       <p className={styles.day}>{info.day}</p>
                       <div>{info.time}</div>
                     </div>
-                    <p>{info.adress}</p>
-                    {info.type && <p>{info.type}</p>}
-                    {info.coach && <p>{info.coach}</p>}
+                    {info.type && <p className={styles.coreography}>{info.type} {info.time2}</p>}
                   </div>
                 })}
               </div>
