@@ -88,7 +88,7 @@ const npGroups = [
         time: <Time time='18001845' />
       },
       {
-        day: 'Пятница',
+        day: 'четверг',
         time: <Time time='18001845' />
       }
     ],
