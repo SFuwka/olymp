@@ -111,6 +111,23 @@ const npGroups = [
     ],
     coach: 'Иванченкова Е.С.',
     isRecruiting: 'идет набор'
+  },
+  {
+    id: 'np7',
+    adress: 'Бул.Алексея Толстого 50/1',
+    age: '2-3 года',
+    daysAndTime:[
+      {
+        day: 'вторник',
+        time: <Time time='10001030' />
+      },
+      {
+        day: 'Пятница',
+        time: <Time time='10001030' />
+      }
+    ],
+    coach: 'Кузенкова Е.И.',
+    isRecruiting: 'идет набор'
   }
 ]
 
