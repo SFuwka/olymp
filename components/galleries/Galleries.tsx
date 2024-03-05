@@ -11,7 +11,7 @@ import styles from './galleries.module.scss'
 export const Galleries = () => {
     return (
         <>
-           <div className={styles.root}>
+            <div className={styles.root}>
                 <section id='competitions'>
                     <h2>соревнования</h2>
                     <Gallery slides={competitionsImages} highResSlides={competitionsImagesHighRes} />
@@ -30,14 +30,14 @@ export const Galleries = () => {
                 </section>
                 <section id='gyms' className={styles.gymsRoot}>
                     <h2>наши залы</h2>
-                    <h3>Малая улица, 9/3</h3>
+                    <h3>Малая улица, 9/3 (ЦСП "Электра")</h3>
                     <Gallery slides={gymsMalayaImages} highResSlides={gymsMalayaImagesHighRes} />
                     <h3>Бульвар Алексея Толстого 50/1</h3>
                     <Gallery slides={gymsTolImages} highResSlides={gymsTolImagesHighRes} />
                     <h3>Полковая 1/25</h3>
                     <Gallery showBullets={2} slides={gymsPolkImages} highResSlides={gymsPolkImagesHighRes} />
                 </section>
-           </div>
+            </div>
         </>
     )
 }

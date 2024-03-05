@@ -26,7 +26,7 @@ export const ActionTop = () => {
                 <h1>ХУДОЖЕСТВЕННАЯ ГИМНАСТИКА<br /><span>СК</span> <span>&quot;ОЛИМП&quot;</span><br /><span>г. Пушкин</span></h1>
                 <div className={styles.adressLinks}>
                     <Link href="https://yandex.ru/maps/10884/pushkin/?from=mapframe&ll=30.399200%2C59.719977&mode=usermaps&source=mapframe&um=constructor%3A7eb3410eadc2ed59f61dedd9861ba0fa59851643a326e3f957f88df1999e7bf8&utm_source=mapframe&z=17.25">
-                        <a target='_blank'><p>Ул малая 9/3</p></a></Link>
+                        <a target='_blank'><p>Ул малая 9/3 (ЦСП "Электра")</p></a></Link>
                     <Link href="https://yandex.ru/maps/10884/pushkin/?from=mapframe&ll=30.382232%2C59.702416&mode=usermaps&source=mapframe&um=constructor%3A7eb3410eadc2ed59f61dedd9861ba0fa59851643a326e3f957f88df1999e7bf8&utm_source=mapframe&z=18'">
                         <a target='_blank'><p>ТРК Константиновский, ул. Полковая 1/25</p></a></Link>
                     <Link href="https://yandex.ru/maps/10884/pushkin/?from=mapframe&ll=30.415129%2C59.730934&source=mapframe&um=constructor%3A7eb3410eadc2ed59f61dedd9861ba0fa59851643a326e3f957f88df1999e7bf8&utm_source=mapframe&z=16.53">

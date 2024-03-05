@@ -54,8 +54,14 @@
 }
 
 .socialButtons {
+    margin-top: 20px;
+    padding-left: space(3);
+    padding-right: space(3);
     display: flex;
     flex-direction: row-reverse;
+    justify-content: space-between;
+    z-index: 10;
+    position: relative;
 }
 .socialButton {
     width: 50px;
@@ -78,5 +84,15 @@
     li {
         padding-left: space(2);
         padding-right: space(2);
+    }
+}
+
+.universityRoot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p {
+        max-width: 120px;
+        font-size: 12px;
     }
 }
