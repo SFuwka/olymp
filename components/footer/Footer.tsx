@@ -29,7 +29,7 @@ function Footer() {
                         <Link className={classes.link} rel='noreferrer' target='_blank' href='https://yandex.ru/maps/10884/pushkin/?from=mapframe&ll=30.415129%2C59.730934&source=mapframe&um=constructor%3A7eb3410eadc2ed59f61dedd9861ba0fa59851643a326e3f957f88df1999e7bf8&utm_source=mapframe&z=16.53'>
                             <a target={'_blank'} >Бульвар Алексея Толстого д.50 к.1.</a></Link>
                         <Link className={classes.link} rel='noreferrer' target='_blank' href='https://yandex.ru/maps/10884/pushkin/?from=mapframe&ll=30.399200%2C59.719977&mode=usermaps&source=mapframe&um=constructor%3A7eb3410eadc2ed59f61dedd9861ba0fa59851643a326e3f957f88df1999e7bf8&utm_source=mapframe&z=17.25'>
-                            <a target={'_blank'} >Ул. малая 9/3 (ЦСП "Электра")</a></Link>
+                            <a target={'_blank'} >Ул. малая 9/3 (ЦСП &quot;Электра&quot;)</a></Link>
                     </div>
                 </div>
                 <div className={classes.socialButtons}>
@@ -54,7 +54,7 @@ function Footer() {
                         <Link className={classes.universityPdf} target='_blank' href='documents/usc.pdf'>
                             <a target='_blank'><PdfIcon /></a>
                         </Link>
-                        <p>ПОЛОЖВНИЕ ОБ УЧЕБНО СПОРТИВНОМ ЦЕНТРЕ АНО ВО "УНИВЕРСИТЕТ при МПП ЕврАзЭС"</p>
+                        <p>ПОЛОЖВНИЕ ОБ УЧЕБНО СПОРТИВНОМ ЦЕНТРЕ АНО ВО &quot;УНИВЕРСИТЕТ при МПП ЕврАзЭС&quot;</p>
                     </div>
                 </div>
             </div>
