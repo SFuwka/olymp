@@ -23,7 +23,7 @@ const Home: NextPage = () => {
 
   return (
     <React.StrictMode>
-      <MainLayout title='Olymp | Home' description='Художественная гимнастика для детей в городе Пушкин'>
+      {/* <MainLayout title='Olymp | Home' description='Художественная гимнастика для детей в городе Пушкин'>
         <Header />
         <Divider />
         {windowWidth <= 750 && <ActionTop />}
@@ -43,7 +43,10 @@ const Home: NextPage = () => {
             <p>Успешно отправлено!</p>
           </aside>
         </Notification>
-      </MainLayout>
+      </MainLayout> */}
+      <main style={{marginTop: '30%'}}>
+        <h1 style={{ textAlign: 'center' }}>На сайте ведуться временные работы</h1>
+      </main>
     </React.StrictMode>
   )
 }
