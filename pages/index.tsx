@@ -45,7 +45,7 @@ const Home: NextPage = () => {
         </Notification>
       </MainLayout> */}
       <main style={{marginTop: '30%'}}>
-        <h1 style={{ textAlign: 'center' }}>На сайте ведуться временные работы</h1>
+        <h1 style={{ textAlign: 'center' }}>На сайте ведутся временные работы</h1>
       </main>
     </React.StrictMode>
   )
