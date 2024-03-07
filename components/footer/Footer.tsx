@@ -3,7 +3,6 @@ import { Instagram as InstagramIcon } from '../../assets/svg/InstagramIcon'
 import { Telegram } from '../../assets/svg/TelegramSvg'
 import { Vk } from '../../assets/svg/VkSvg'
 import classes from './Footer.module.scss'
-import { PdfIcon } from '../../assets/svg/PdfIcon'
 
 
 function Footer() {
