@@ -8,7 +8,7 @@ import { Time } from './Time'
 const npGroups = [
   {
     id: 'np1',
-    adress: 'ул. Малая 9/3',
+    adress: 'г.Пушкин, центр',
     age: '4-7 лет',
     daysAndTime: [
       {
@@ -46,7 +46,7 @@ const npGroups = [
   },
   {
     id: 'np3',
-    adress: 'ул. Малая 9/3',
+    adress: 'г.Пушкин, центр',
     age: '3-6 лет',
     daysAndTime: [
       {
@@ -63,7 +63,7 @@ const npGroups = [
   },
   {
     id: 'np4',
-    adress: 'ул. Малая 9/3',
+    adress: 'г.Пушкин, центр',
     age: '5-9 лет',
     daysAndTime: [
       {
@@ -80,7 +80,7 @@ const npGroups = [
   },
   {
     id: 'np5',
-    adress: 'ул. Малая 9/3',
+    adress: 'г.Пушкин, центр',
     age: '3-5 лет',
     daysAndTime: [
       {
@@ -151,7 +151,7 @@ const utgGroups = [
   },
   {
     id: 'utg2',
-    adress: 'ул. Малая 9/3',
+    adress: 'г.Пушкин, центр',
     age: '6-12 лет',
     daysAndTime: [
       {
@@ -194,7 +194,7 @@ const squadGroups = [
     id: 'squad1',
     age: '2015 гр. и старше',
     coaches: ['Леляк В.И.', 'Кузенкова Е.И.'],
-    adress: 'ул. Малая 9/3',
+    adress: 'г.Пушкин, центр',
     info: [
       {
         day: 'понедельник',
@@ -221,7 +221,7 @@ const squadGroups = [
   {
     id: 'squad2',
     age: '2011 гр. и младше',
-    adress: 'ул. Малая 9/3',
+    adress: 'г.Пушкин, центр',
     coaches: ['Кузенкова Е.И.', 'Леляк В.И.'],
     info: [
       {
