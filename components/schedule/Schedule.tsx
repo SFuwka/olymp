@@ -9,7 +9,7 @@ const npGroups = [
   {
     id: 'np1',
     adress: 'г.Пушкин, центр',
-    age: '4-7 лет',
+    age: '6-9 лет',
     daysAndTime: [
       {
         day: 'Вторник',
@@ -28,26 +28,9 @@ const npGroups = [
     isRecruiting: 'идет набор'
   },
   {
-    id: 'np2',
-    adress: 'ул. Полковая 1/25',
-    age: '3-6 лет',
-    daysAndTime: [
-      {
-        day: 'понедельник',
-        time: <Time time='18001845' />
-      },
-      {
-        day: 'среда',
-        time: <Time time='18001845' />
-      }
-    ],
-    coach: 'Бигеева К.В.',
-    isRecruiting: 'идет набор'
-  },
-  {
     id: 'np3',
     adress: 'г.Пушкин, центр',
-    age: '3-6 лет',
+    age: '3-5 лет',
     daysAndTime: [
       {
         day: 'вторник',
@@ -58,7 +41,7 @@ const npGroups = [
         time: <Time time='18001900' />
       }
     ],
-    coach: 'Бигеева К.В.',
+    coach: 'Кузенкова Е.И.',
     isRecruiting: 'идет набор'
   },
   {
@@ -68,11 +51,11 @@ const npGroups = [
     daysAndTime: [
       {
         day: 'понедельник',
-        time: <Time time='18301930' />
+        time: <Time time='18001900' />
       },
       {
         day: 'среда',
-        time: <Time time='18301930' />
+        time: <Time time='18001900' />
       }
     ],
     coach: 'Кузенкова Е.И.',
@@ -81,15 +64,15 @@ const npGroups = [
   {
     id: 'np5',
     adress: 'г.Пушкин, центр',
-    age: '3-5 лет',
+    age: '5-7 лет',
     daysAndTime: [
       {
         day: 'вторник',
-        time: <Time time='18001845' />
+        time: <Time time='18001930' />
       },
       {
         day: 'четверг',
-        time: <Time time='18001845' />
+        time: <Time time='18001930' />
       }
     ],
     coach: 'Кузенкова Е.И.',
@@ -98,44 +81,27 @@ const npGroups = [
   {
     id: 'np6',
     adress: 'Бул.Алексея Толстого 50/1',
-    age: '3-6 лет',
+    age: '4-7 лет',
     daysAndTime: [
       {
-        day: 'вторник',
-        time: <Time time='19302015' />
+        day: 'понедельник',
+        time: <Time time='16301730' />
       },
       {
-        day: 'Пятница',
-        time: <Time time='18301915' />
+        day: 'четверг',
+        time: <Time time='16301730' />
       }
     ],
     coach: 'Иванченкова Е.С.',
     isRecruiting: 'идет набор'
   },
-  {
-    id: 'np7',
-    adress: 'Бул.Алексея Толстого 50/1',
-    age: '2-3 года',
-    daysAndTime:[
-      {
-        day: 'вторник',
-        time: <Time time='10001030' />
-      },
-      {
-        day: 'Пятница',
-        time: <Time time='10001030' />
-      }
-    ],
-    coach: 'Кузенкова Е.И.',
-    isRecruiting: 'идет набор'
-  }
 ]
 
 const utgGroups = [
   {
     id: 'utg1',
     adress: 'ул. Полковая 1/25',
-    age: '6-10 лет',
+    age: '5-9 лет',
     daysAndTime: [
       {
         day: 'понедельник',
@@ -164,27 +130,10 @@ const utgGroups = [
       },
       {
         day: 'Пятница',
-        time: <Time time='18001930' />
+        time: <Time time='16301930' />
       }
     ],
     coach: 'Кузенкова Е.И.',
-    isRecruiting: 'есть свободные места'
-  },
-  {
-    id: 'utg3',
-    adress: 'Бул.Алексея Толстого 50/1',
-    age: '5-8 лет',
-    daysAndTime: [
-      {
-        day: 'вторник',
-        time: <Time time='18301930' />
-      },
-      {
-        day: 'Пятница',
-        time: <Time time='17301830' />
-      }
-    ],
-    coach: 'Иванченкова Е.С.',
     isRecruiting: 'есть свободные места'
   },
 ]
