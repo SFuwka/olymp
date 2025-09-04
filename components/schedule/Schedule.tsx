@@ -9,45 +9,24 @@ const npGroups = [
   {
     id: 'np1',
     adress: 'г.Пушкин, центр',
-    age: '6-9 лет',
+    age: '7-9 лет',
     daysAndTime: [
       {
-        day: 'Вторник',
-        time: <Time time='18001930' />
-      },
-      {
         day: 'Среда',
-        time: <Time time='18001930' />
+        time: <Time time='18302000' />
       },
       {
         day: 'Пятница',
-        time: <Time time='18001930' />
-      }
+        time: <Time time='18302000' />
+      },
     ],
-    coach: 'Леляк В.И.',
+    coach: 'Кузенкова Е.И.',
     isRecruiting: 'идет набор'
   },
   {
     id: 'np3',
     adress: 'г.Пушкин, центр',
     age: '3-5 лет',
-    daysAndTime: [
-      {
-        day: 'вторник',
-        time: <Time time='18001900' />
-      },
-      {
-        day: 'четверг',
-        time: <Time time='18001900' />
-      }
-    ],
-    coach: 'Кузенкова Е.И.',
-    isRecruiting: 'идет набор'
-  },
-  {
-    id: 'np4',
-    adress: 'г.Пушкин, центр',
-    age: '5-9 лет',
     daysAndTime: [
       {
         day: 'понедельник',
@@ -62,38 +41,38 @@ const npGroups = [
     isRecruiting: 'идет набор'
   },
   {
-    id: 'np5',
+    id: 'np4',
     adress: 'г.Пушкин, центр',
-    age: '5-7 лет',
+    age: '10-13 лет',
     daysAndTime: [
       {
-        day: 'вторник',
-        time: <Time time='18001930' />
+        day: 'среда',
+        time: <Time time='18302000' />
       },
       {
-        day: 'четверг',
-        time: <Time time='18001930' />
+        day: 'пятница',
+        time: <Time time='18302000' />
       }
     ],
-    coach: 'Кузенкова Е.И.',
+    coach: 'Иванченкова Е.С..',
     isRecruiting: 'идет набор'
   },
   {
-    id: 'np6',
-    adress: 'Бул.Алексея Толстого 50/1',
-    age: '4-7 лет',
+    id: 'np420',
+    adress: 'ул. Полковая 1/25',
+    age: '3-6 лет',
     daysAndTime: [
       {
-        day: 'понедельник',
-        time: <Time time='16301730' />
+        day: 'вторник',
+        time: <Time time='18301915' />
       },
       {
         day: 'четверг',
-        time: <Time time='16301730' />
+        time: <Time time='18301915' />
       }
     ],
-    coach: 'Иванченкова Е.С.',
-    isRecruiting: 'идет набор'
+    coach: 'Кузенкова Е.И.',
+    isRecruiting: 'есть свободные места'
   },
 ]
 
@@ -104,15 +83,15 @@ const utgGroups = [
     age: '5-9 лет',
     daysAndTime: [
       {
-        day: 'понедельник',
-        time: <Time time='19002030' />
+        day: 'вторник',
+        time: <Time time='18302000' />
       },
       {
-        day: 'среда',
-        time: <Time time='19002030' />
+        day: 'четверг',
+        time: <Time time='18302000' />
       }
     ],
-    coach: 'Бигеева К.В.',
+    coach: 'Кузенкова Е.И.',
     isRecruiting: 'есть свободные места'
   },
   {
@@ -122,26 +101,89 @@ const utgGroups = [
     daysAndTime: [
       {
         day: 'понедельник',
-        time: <Time time='16301830' />
+        time: <Time time='16301800' />
       },
       {
         day: 'среда',
-        time: <Time time='16301830' />
+        time: <Time time='16301800' />
       },
       {
-        day: 'Пятница',
-        time: <Time time='16301930' />
+        day: 'четверг',
+        time: <Time time='16301800' />
       }
     ],
     coach: 'Кузенкова Е.И.',
     isRecruiting: 'есть свободные места'
+  },
+  {
+    id: 'utg420',
+    adress: 'г.Пушкин, центр',
+    age: '5-7 лет',
+    daysAndTime: [
+      {
+        day: 'вторник',
+        time: <Time time='18302000' />
+      },
+      {
+        day: 'четверг',
+        time: <Time time='18302000' />
+      },
+      {
+        day: 'пятница',
+        time: <Time time='17302000' />
+      }
+    ],
+    coach: 'Бигеева К.В.',
+    isRecruiting: 'мест нет'
+  },
+  {
+    id: 'utg666',
+    adress: 'г.Пушкин, центр',
+    age: '6-8 лет',
+    daysAndTime: [
+      {
+        day: 'вторник',
+        time: <Time time='16301830' />
+      },
+      {
+        day: 'четверг',
+        time: <Time time='16301930' />
+      },
+      {
+        day: 'пятница',
+        time: <Time time='16301830' />
+      }
+    ],
+    coach: 'Бигеева К.В.',
+    isRecruiting: 'мест нет'
+  },
+  {
+    id: 'utg',
+    adress: 'г.Пушкин, центр',
+    age: '10-13 лет',
+    daysAndTime: [
+      {
+        day: 'понедельник',
+        time: <Time time='16301830' />
+      },
+      {
+        day: 'вторник',
+        time: <Time time='16301830' />
+      },
+      {
+        day: 'четверг',
+        time: <Time time='16301930' />
+      },
+    ],
+    coach: 'Иванченкова Е.С..',
+    isRecruiting: 'идет набор'
   },
 ]
 
 const squadGroups = [
   {
     id: 'squad1',
-    age: '2015 гр. и старше',
+    age: 'Сборная I',
     coaches: ['Леляк В.И.', 'Кузенкова Е.И.'],
     adress: 'г.Пушкин, центр',
     info: [
@@ -157,21 +199,21 @@ const squadGroups = [
       },
       {
         day: 'четверг',
-        time: <Time time='16301930' />,
+        time: <Time time='16301830' />,
+        type: `хореография`,
+        time2: <Time time='18302000' />
       },
       {
         day: 'пятница',
-        time: <Time time='16301800' />,
-        type: `хореография`,
-        time2: <Time time='18001930' />
+        time: <Time time='16301930' />,
       },
     ]
   },
   {
     id: 'squad2',
-    age: '2011 гр. и младше',
+    age: 'Сборная II',
     adress: 'г.Пушкин, центр',
-    coaches: ['Кузенкова Е.И.', 'Леляк В.И.'],
+    coaches: ['Кузенкова Е.И.', 'Бигеева К.В.'],
     info: [
       {
         day: 'Понедельник',
@@ -182,11 +224,14 @@ const squadGroups = [
         time: <Time time='16301830' />,
       },
       {
+        day: 'четверг',
+        time: <Time time='16301830' />,
+        type: `хореография`,
+        time2: <Time time='18302000' />
+      },
+      {
         day: 'пятница',
-        time: <Time time='18001930' />,
-        type: 'хореография',
-        time2: <Time time='16301800' />
-
+        time: <Time time='16301930' />,
       },
     ]
   },

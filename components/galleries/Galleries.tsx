@@ -32,9 +32,7 @@ export const Galleries = () => {
                     <h2>наши залы</h2>
                     {/* <h3>Малая улица, 9/3 (ЦСП &quot;Электра&quot;)</h3>
                     <Gallery slides={gymsMalayaImages} highResSlides={gymsMalayaImagesHighRes} /> */}
-                    <h3>Бульвар Алексея Толстого 50/1</h3>
                     <Gallery slides={gymsTolImages} highResSlides={gymsTolImagesHighRes} />
-                    <h3>Полковая 1/25</h3>
                     <Gallery showBullets={2} slides={gymsPolkImages} highResSlides={gymsPolkImagesHighRes} />
                 </section>
             </div>
