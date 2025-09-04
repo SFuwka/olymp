@@ -25,17 +25,14 @@ function Footer() {
                         <p >г. Пушкин</p>
                         <Link className={classes.link} rel='noreferrer' target='_blank' href='https://yandex.ru/maps/10884/pushkin/?from=mapframe&ll=30.382232%2C59.702416&mode=usermaps&source=mapframe&um=constructor%3A7eb3410eadc2ed59f61dedd9861ba0fa59851643a326e3f957f88df1999e7bf8&utm_source=mapframe&z=18'>
                             <a target={'_blank'}>ТРК Константиновский, ул. Полковая 1/25</a></Link>
+                        <Link href="https://yandex.ru/maps/10884/pushkin/?from=mapframe&ll=30.399200%2C59.719977&mode=usermaps&source=mapframe&um=constructor%3A7eb3410eadc2ed59f61dedd9861ba0fa59851643a326e3f957f88df1999e7bf8&utm_source=mapframe&z=17.25">
+                            <a target='_blank'><p>Пушкин - центр</p></a></Link>
                         {/* <Link className={classes.link} rel='noreferrer' target='_blank' href='https://yandex.ru/maps/10884/pushkin/?from=mapframe&ll=30.399200%2C59.719977&mode=usermaps&source=mapframe&um=constructor%3A7eb3410eadc2ed59f61dedd9861ba0fa59851643a326e3f957f88df1999e7bf8&utm_source=mapframe&z=17.25'>
                             <a target={'_blank'} >Ул. малая 9/3 (ЦСП &quot;Электра&quot;)</a></Link> */}
                     </div>
                 </div>
                 <div className={classes.socialButtons}>
                     <ul className={classes.list}>
-                        <li>
-                            <Link target='_blank' href='https://www.instagram.com/gymnastika_spb/' className={classes.socialButton}>
-                                <a target={'_blank'}><InstagramIcon width={30} height={30} /></a>
-                            </Link>
-                        </li>
                         <li>
                             <Link target='_blank' href='https://vk.com/olymp_pushkin' className={classes.socialButton}>
                                 <a target={'_blank'}><Vk width={30} height={30} /></a>
@@ -47,12 +44,6 @@ function Footer() {
                             </Link>
                         </li>
                     </ul>
-                    {/* <div className={classes.universityRoot}>
-                        <Link className={classes.universityPdf} target='_blank' href='documents/usc.pdf'>
-                            <a target='_blank'><PdfIcon /></a>
-                        </Link>
-                        <p>ПОЛОЖВНИЕ ОБ УЧЕБНО СПОРТИВНОМ ЦЕНТРЕ АНО ВО &quot;УНИВЕРСИТЕТ при МПП ЕврАзЭС&quot;</p>
-                    </div> */}
                 </div>
             </div>
         </section>

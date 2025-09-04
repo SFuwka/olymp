@@ -48,7 +48,6 @@ export const Navigation = () => {
                     <div className={styles.socialAndPhones}>
                         <div className={styles.social}>
                             <Link href={'https://vk.com/olymp_pushkin'}><a target='_blank'><Vk width={30} height={30} /></a></Link>
-                            <Link href={'https://www.instagram.com/gymnastika_spb/'}><a target='_blank'><Instagram width={30} height={30} /></a></Link>
                             <Link href={'https://t.me/olymp_puskin'}><a target='_blank'><Telegram /></a></Link>
                         </div>
                         <div className={styles.phones}>
