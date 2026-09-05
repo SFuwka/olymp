@@ -25,7 +25,6 @@
     "react-grid-gallery": "^1.0.0",
     "react-remove-scroll": "^2.5.5",
     "react-zoom-pan-pinch": "^2.1.3",
-    "sharp": "^0.31.1",
     "swiper": "^8.3.1",
     "web-push": "^3.6.7",
     "webp-loader": "^0.6.0"
@@ -34,8 +33,8 @@
     "@types/better-sqlite3": "^9.6.0",
     "@types/node": "18.0.1",
     "@types/node-telegram-bot-api": "^0.57.7",
-    "@types/react": "^18.0.14",
-    "@types/react-dom": "18.0.5",
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "^18.0.5",
     "@types/swiper": "^6.0.0",
     "@types/web-push": "^3.6.4",
     "eslint": "8.19.0",
