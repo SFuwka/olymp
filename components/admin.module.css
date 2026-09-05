@@ -1,0 +1,185 @@
+.page {
+    min-height: 100vh;
+    background: #12181f;
+    color: #eef1f5;
+    font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+/* --- login --- */
+.loginWrap {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginCard {
+    width: 100%;
+    max-width: 320px;
+    padding: 0 24px;
+}
+
+.loginTitle {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 6px;
+    letter-spacing: -0.01em;
+}
+
+.loginSub {
+    color: #8b95a3;
+    font-size: 14px;
+    margin: 0 0 24px;
+}
+
+.input {
+    width: 100%;
+    box-sizing: border-box;
+    background: transparent;
+    border: 1px solid #2b3542;
+    border-radius: 4px;
+    color: #eef1f5;
+    padding: 10px 12px;
+    font-size: 15px;
+    outline: none;
+}
+
+.input:focus {
+    border-color: #2f7d68;
+}
+
+.button {
+    margin-top: 12px;
+    width: 100%;
+    background: #2f7d68;
+    color: #eef1f5;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 12px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.button:disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+
+.buttonGhost {
+    background: transparent;
+    border: 1px solid #2b3542;
+    color: #eef1f5;
+}
+
+.error {
+    color: #d9704f;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+/* --- dashboard --- */
+.header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 24px 32px 16px;
+    border-bottom: 1px solid #202a35;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.headerActions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.list {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 16px 32px 64px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 4px 1fr auto;
+    align-items: center;
+    gap: 16px;
+    border-bottom: 1px solid #202a35;
+    padding: 14px 0;
+    cursor: pointer;
+}
+
+.rowBar {
+    align-self: stretch;
+    border-radius: 2px;
+}
+
+.rowBarNew {
+    background: #d98e3f;
+}
+
+.rowBarViewed {
+    background: #3a4a5c;
+}
+
+.rowBarHandled {
+    background: #2f7d68;
+}
+
+.rowMain {
+    min-width: 0;
+}
+
+.rowName {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.rowMeta {
+    color: #8b95a3;
+    font-size: 13px;
+    margin-top: 3px;
+}
+
+.rowQuestion {
+    color: #b6bfca;
+    font-size: 13px;
+    margin-top: 6px;
+}
+
+.rowRight {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    white-space: nowrap;
+}
+
+.statusLabel {
+    font-size: 12px;
+    color: #8b95a3;
+}
+
+.handleButton {
+    background: transparent;
+    border: 1px solid #2f7d68;
+    color: #2f7d68;
+    border-radius: 4px;
+    padding: 6px 10px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.handleButton:hover {
+    background: #2f7d6822;
+}
+
+.empty {
+    color: #8b95a3;
+    padding: 40px 0;
+    text-align: center;
+}

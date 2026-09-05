@@ -33,3 +33,9 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+
+data/*.db
+data/*.db-wal
+data/*.db-shm
+.env.local
+README-admin-setup.md
