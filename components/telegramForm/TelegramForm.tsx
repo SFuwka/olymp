@@ -41,45 +41,48 @@ export const TelegramForm = ({ inModal, closeModal, withQuestion, metaInfo }: Te
 
     const handleClick = (e: React.MouseEvent<HTMLElement>) => {
         e.preventDefault()
-        if (!formData.name || !formData.phone || formData.phone.match(/\d/g)?.length !== 11 || !checked) {
+        if (
+            !formData.name ||
+            !formData.phone ||
+            formData.phone.match(/\d/g)?.length !== 11 ||
+            !checked
+        ) {
             if (!formData.name) {
-                setErrors(prev => {
-                    return { ...prev, nameError: 'поле обязательно' }
-                })
+                setErrors((prev) => ({ ...prev, nameError: 'поле обязательно' }))
             }
             if (!formData.phone) {
-                setErrors(prev => {
-                    return { ...prev, phoneError: 'поле обязательно' }
-                })
+                setErrors((prev) => ({ ...prev, phoneError: 'поле обязательно' }))
                 return
             }
             if (formData.phone.match(/\d/g)?.length !== 11) {
-                return setErrors(prev => {
-                    return { ...prev, phoneError: 'некорректный телефон' }
-                })
+                return setErrors((prev) => ({
+                    ...prev,
+                    phoneError: 'некорректный телефон',
+                }))
             }
             if (!checked) {
-                return setErrors(prev => {
-                    return { ...prev, checkError: 'согласитесь на обработку персональных данных' }
-                })
+                return setErrors((prev) => ({
+                    ...prev,
+                    checkError: 'согласитесь на обработку персональных данных',
+                }))
             }
             return
         }
-        setinProgress(true)
-        fetch('/api/telegram',
-            {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData)
-            }).then(res => {
-                if (res.ok) {
-                    context.setState({ TrialRequestSended: true })
-                    if (closeModal) closeModal(e, true)
-                }
-            }).finally(() => setinProgress(false))
 
+        setinProgress(true)
+
+        // Show success immediately — don’t wait for Telegram / network
+        context.setState({ TrialRequestSended: true })
+        if (closeModal) closeModal(e, true)
+
+        fetch('/api/telegram', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(formData),
+        })
+            // optional: log failures, but don’t revert the UI
+            .catch((err) => console.error('telegram submit failed', err))
+            .finally(() => setinProgress(false))
     }
 
     const handleCheck = (e: React.ChangeEvent<HTMLInputElement>) => {

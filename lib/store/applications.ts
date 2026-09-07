@@ -80,3 +80,13 @@ export function markHandled(applicationId: number) {
         `UPDATE applications SET handled = 1, handled_at = datetime('now') WHERE id = ?`
     ).run(applicationId)
 }
+
+export function unmarkHandled(applicationId: number) {
+    db.prepare(
+        `UPDATE applications SET handled = 0, handled_at = NULL WHERE id = ?`
+    ).run(applicationId)
+}
+
+export function deleteApplication(applicationId: number) {
+    db.prepare(`DELETE FROM applications WHERE id = ?`).run(applicationId)
+}

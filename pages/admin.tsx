@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import AdminLogin from '../components/AdminLogin'
 import ApplicationsList from '../components/ApplicationsList'
 import PushNotificationSetup from '../components/PushNotificationSetup'
-import styles from '../components/admin.module.css'
+import styles from '../components/admin.module.scss'
 
 export default function AdminPage() {
     const [isAdmin, setIsAdmin] = useState<boolean | null>(null)
@@ -31,7 +31,7 @@ export default function AdminPage() {
     return (
         <div className={styles.page}>
             <div className={styles.header}>
-                <h1 className={styles.title}>Applications</h1>
+                <h1 className={styles.title}>Админка</h1>
                 <div className={styles.headerActions}>
                     <PushNotificationSetup />
                     <button
@@ -39,7 +39,7 @@ export default function AdminPage() {
                         style={{ width: 'auto', marginTop: 0 }}
                         onClick={logout}
                     >
-                        Log out
+                        Выйти
                     </button>
                 </div>
             </div>
